@@ -1,0 +1,300 @@
+----- GAMESS execution script 'rungms' -----
+This job is running on host n153
+under operating system Linux at Wed Feb 3 17:07:31 EST 2016
+PBS has assigned the following compute nodes to this run:
+n153
+Available scratch disk space at beginning of the job is
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/sda2             229G   25K  217G   1% /scratch
+Copying input file gamess.inp.gamin to your run's scratch directory...
+Copying input file gamess.inp to your run's scratch directory...
+
+ Distributed Data Interface kickoff program.
+ Initiating 1 compute processes on 1 nodes to run the following command:
+ /opt/sam/gamess/2013-05-01//gamess.00.sockets.x gamess 
+
+          ******************************************************
+          *         GAMESS VERSION =  1 MAY 2013 (R1)          *
+          *             FROM IOWA STATE UNIVERSITY             *
+          * M.W.SCHMIDT, K.K.BALDRIDGE, J.A.BOATZ, S.T.ELBERT, *
+          *   M.S.GORDON, J.H.JENSEN, S.KOSEKI, N.MATSUNAGA,   *
+          *          K.A.NGUYEN, S.J.SU, T.L.WINDUS,           *
+          *       TOGETHER WITH M.DUPUIS, J.A.MONTGOMERY       *
+          *         J.COMPUT.CHEM.  14, 1347-1363(1993)        *
+          **************** 64 BIT INTEL VERSION ****************
+
+  SINCE 1993, STUDENTS AND POSTDOCS WORKING AT IOWA STATE UNIVERSITY
+  AND ALSO IN THEIR VARIOUS JOBS AFTER LEAVING ISU HAVE MADE IMPORTANT
+  CONTRIBUTIONS TO THE CODE:
+     IVANA ADAMOVIC, CHRISTINE AIKENS, YURI ALEXEEV, POOJA ARORA,
+     ANDREY ASADCHEV, ROB BELL, PRADIPTA BANDYOPADHYAY, JONATHAN BENTZ,
+     BRETT BODE, GALINA CHABAN, WEI CHEN, CHEOL HO CHOI, PAUL DAY,
+     ALBERT DEFUSCO, TIM DUDLEY, DMITRI FEDOROV, GRAHAM FLETCHER,
+     MARK FREITAG, KURT GLAESEMANN, DAN KEMP, GRANT MERRILL,
+     NORIYUKI MINEZAWA, JONATHAN MULLIN, TAKESHI NAGATA,
+     SEAN NEDD, HEATHER NETZLOFF, BOSILJKA NJEGIC, RYAN OLSON, MIKE PAK,
+     JIM SHOEMAKER, LYUDMILA SLIPCHENKO, SAROM SOK, JIE SONG,
+     TETSUYA TAKETSUGU, SIMON WEBB, SOOHAENG YOO, FEDERICO ZAHARIEV
+
+  ADDITIONAL CODE HAS BEEN PROVIDED BY COLLABORATORS IN OTHER GROUPS:
+     IOWA STATE UNIVERSITY:
+          JOE IVANIC, LAIMUTIS BYTAUTAS, KLAUS RUEDENBERG
+     UNIVERSITY OF TOKYO: KIMIHIKO HIRAO, TAKAHITO NAKAJIMA,
+          TAKAO TSUNEDA, MUNEAKI KAMIYA, SUSUMU YANAGISAWA,
+          KIYOSHI YAGI, MAHITO CHIBA, SEIKEN TOKURA, NAOAKI KAWAKAMI
+     UNIVERSITY OF AARHUS: FRANK JENSEN
+     UNIVERSITY OF IOWA: VISVALDAS KAIRYS, HUI LI
+     NATIONAL INST. OF STANDARDS AND TECHNOLOGY: WALT STEVENS, DAVID GARMER
+     UNIVERSITY OF PISA: BENEDETTA MENNUCCI, JACOPO TOMASI
+     UNIVERSITY OF MEMPHIS: HENRY KURTZ, PRAKASHAN KORAMBATH
+     UNIVERSITY OF ALBERTA: TOBY ZENG, MARIUSZ KLOBUKOWSKI
+     UNIVERSITY OF NEW ENGLAND: MARK SPACKMAN
+     MIE UNIVERSITY: HIROAKI UMEDA
+     MICHIGAN STATE UNIVERSITY:
+          KAROL KOWALSKI, MARTA WLOCH, JEFFREY GOUR, JESSE LUTZ,
+          WEI LI, PIOTR PIECUCH
+     UNIVERSITY OF SILESIA: MONIKA MUSIAL, STANISLAW KUCHARSKI
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX:
+          OLIVIER QUINET, BENOIT CHAMPAGNE
+     UNIVERSITY OF CALIFORNIA - SANTA BARBARA: BERNARD KIRTMAN
+     INSTITUTE FOR MOLECULAR SCIENCE:
+          KAZUYA ISHIMURA, MICHIO KATOUDA, AND SHIGERU NAGASE
+     UNIVERSITY OF NOTRE DAME: DAN CHIPMAN
+     KYUSHU UNIVERSITY:
+          HARUYUKI NAKANO,
+          FENG LONG GU, JACEK KORCHOWIEC, MARCIN MAKOWSKI, AND YURIKO AOKI,
+          HIROTOSHI MORI AND EISAKU MIYOSHI
+     PENNSYLVANIA STATE UNIVERSITY:
+          TZVETELIN IORDANOV, CHET SWALINA, JONATHAN SKONE,
+          SHARON HAMMES-SCHIFFER
+     WASEDA UNIVERSITY:
+          MASATO KOBAYASHI, TOMOKO AKAMA, TSUGUKI TOUMA,
+          TAKESHI YOSHIKAWA, YASUHIRO IKABATA, HIROMI NAKAI
+     NANJING UNIVERSITY: SHUHUA LI
+     UNIVERSITY OF NEBRASKA:
+          PEIFENG SU, DEJUN SI, NANDUN THELLAMUREGE, YALI WANG, HUI LI
+     UNIVERSITY OF ZURICH:
+          ROBERTO PEVERATI, KIM BALDRIDGE
+     N. COPERNICUS UNIVERSITY AND JACKSON STATE UNIVERSITY:
+          MARIA BARYSZ
+
+ EXECUTION OF GAMESS BEGUN Wed Feb  3 17:07:32 2016
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD>!   File created by the GAMESS Input Deck Generator Plugin for Avogadro         
+ INPUT CARD> $BASIS GBASIS=STO NGAUSS=3 $END                                                
+ INPUT CARD> $CONTRL SCFTYP=RHF RUNTYP=ENERGY NOSYM=1 MAXIT=100 CCTYP=CCSD(T) $END          
+ INPUT CARD> $SCF DIRSCF=.TRUE. CONV=1.0D-09 $END                                           
+ INPUT CARD>                                                                                
+ INPUT CARD> $DATA                                                                          
+ INPUT CARD>Title                                                                           
+ INPUT CARD>C1                                                                              
+ INPUT CARD>C     6.0    -4.17279     2.71785    -0.10705                                   
+ INPUT CARD>N     7.0    -4.61074     1.36006     0.11435                                   
+ INPUT CARD>O     8.0    -3.39764     1.66807    -0.47929                                   
+ INPUT CARD>S    16.0    -3.54968     3.49993     1.40731                                   
+ INPUT CARD>H     1.0    -4.65853     3.25487    -0.95033                                   
+ INPUT CARD>H     1.0    -5.24440     1.07756    -0.66755                                   
+ INPUT CARD>H     1.0    -4.78235     3.34711     2.06997                                   
+ INPUT CARD> $END                                                                           
+    1000000 WORDS OF MEMORY AVAILABLE
+
+     BASIS OPTIONS
+     -------------
+     GBASIS=STO          IGAUSS=       3      POLAR=NONE    
+     NDFUNC=       0     NFFUNC=       0     DIFFSP=       F
+     NPFUNC=       0      DIFFS=       F     BASNAM=        
+
+
+     RUN TITLE
+     ---------
+ Title                                                                           
+
+ THE POINT GROUP OF THE MOLECULE IS C1      
+ THE ORDER OF THE PRINCIPAL AXIS IS     0
+
+ ATOM      ATOMIC                      COORDINATES (BOHR)
+           CHARGE         X                   Y                   Z
+ C           6.0    -7.8854297043        5.1359917757       -0.2022951670
+ N           7.0    -8.7130352006        2.5701407269        0.2160901667
+ O           8.0    -6.4206086049        3.1521952283       -0.9057267687
+ S          16.0    -6.7079225441        6.6139086762        2.6594302798
+ H           1.0    -8.8033452056        6.1508124257       -1.7958632979
+ H           1.0    -9.9104789700        2.0362931353       -1.2614865831
+ H           1.0    -9.0373310774        6.3251207508        3.9116761028
+
+          INTERNUCLEAR DISTANCES (ANGS.)
+          ------------------------------
+
+                1 C          2 N          3 O          4 S          5 H     
+
+   1 C       0.0000000    1.4437492 *  1.3570034 *  1.8147180 *  1.1115102 *
+   2 N       1.4437492 *  0.0000000    1.3852401 *  2.7159966 *  2.1739670 *
+   3 O       1.3570034 *  1.3852401 *  0.0000000    2.6340248 *  2.0807827 *
+   4 S       1.8147180 *  2.7159966 *  2.6340248 *  0.0000000    2.6168816 *
+   5 H       1.1115102 *  2.1739670 *  2.0807827 *  2.6168816 *  0.0000000  
+   6 H       2.0379057 *  1.0453224 *  1.9479903 *  3.6117858    2.2724188 *
+   7 H       2.3466887 *  2.7932539 *  3.3519134    1.4078166 *  3.0242440  
+
+                6 H          7 H     
+
+   1 C       2.0379057 *  2.3466887 *
+   2 N       1.0453224 *  2.7932539 *
+   3 O       1.9479903 *  3.3519134  
+   4 S       3.6117858    1.4078166 *
+   5 H       2.2724188 *  3.0242440  
+   6 H       0.0000000    3.5858560  
+   7 H       3.5858560    0.0000000  
+
+  * ... LESS THAN  3.000
+
+
+     ATOMIC BASIS SET
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ C         
+
+      1   S       1            71.6168373    0.154328967295
+      1   S       2            13.0450963    0.535328142282
+      1   S       3             3.5305122    0.444634542185
+
+      2   L       4             2.9412494   -0.099967229187    0.155916274999
+      2   L       5             0.6834831    0.399512826089    0.607683718598
+      2   L       6             0.2222899    0.700115468880    0.391957393099
+
+ N         
+
+      3   S       7            99.1061690    0.154328967295
+      3   S       8            18.0523124    0.535328142282
+      3   S       9             4.8856602    0.444634542185
+
+      4   L      10             3.7804559   -0.099967229187    0.155916274999
+      4   L      11             0.8784966    0.399512826089    0.607683718598
+      4   L      12             0.2857144    0.700115468880    0.391957393099
+
+ O         
+
+      5   S      13           130.7093214    0.154328967295
+      5   S      14            23.8088661    0.535328142282
+      5   S      15             6.4436083    0.444634542185
+
+      6   L      16             5.0331513   -0.099967229187    0.155916274999
+      6   L      17             1.1695961    0.399512826089    0.607683718598
+      6   L      18             0.3803890    0.700115468880    0.391957393099
+
+ S         
+
+      7   S      19           533.1257359    0.154328967295
+      7   S      20            97.1095183    0.535328142282
+      7   S      21            26.2816254    0.444634542185
+
+      8   L      22            33.3297517   -0.099967229187    0.155916274999
+      8   L      23             7.7451175    0.399512826089    0.607683718598
+      8   L      24             2.5189526    0.700115468880    0.391957393099
+
+      9   L      25             1.7985832   -0.219620369005    0.010587604289
+      9   L      26             0.5018001    0.225595433605    0.595167005266
+      9   L      27             0.1964012    0.900398426019    0.462001011973
+
+ H         
+
+     10   S      28             3.4252509    0.154328967295
+     10   S      29             0.6239137    0.535328142282
+     10   S      30             0.1688554    0.444634542185
+
+ H         
+
+     11   S      31             3.4252509    0.154328967295
+     11   S      32             0.6239137    0.535328142282
+     11   S      33             0.1688554    0.444634542185
+
+ H         
+
+     12   S      34             3.4252509    0.154328967295
+     12   S      35             0.6239137    0.535328142282
+     12   S      36             0.1688554    0.444634542185
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =   12
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =   27
+ NUMBER OF ELECTRONS                          =   40
+ CHARGE OF MOLECULE                           =    0
+ SPIN MULTIPLICITY                            =    1
+ NUMBER OF OCCUPIED ORBITALS (ALPHA)          =   20
+ NUMBER OF OCCUPIED ORBITALS (BETA )          =   20
+ TOTAL NUMBER OF ATOMS                        =    7
+ THE NUCLEAR REPULSION ENERGY IS      160.9971387492
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=ENERGY       EXETYP=RUN     
+ MPLEVL=       0     CITYP =NONE         CCTYP =CCSD(T)      VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE  
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=      -1     NOSYM =       1     MAXIT =     100     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=       7     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      20     ICUT  =       9
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=     1000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=           0 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   1 PROCESSORS IS           0 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=     1000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= F  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1    27     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTOFF = 1.0E-09     MPTRAN =       0
+     DIRTRF =       T     AOINTS =DUP     
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       T
+
+     *** ERROR IN CC CALCULATION ***
+ THE NUMBER OF CORRELATED OCCUPIED ORBITALS=    12
+ THE NUMBER OF EMPTY, CORRELATING ORBITALS =     7
+ NEITHER OF THESE SHOULD BE ZERO, AND YOU MUST RUN
+ WITH MORE EMPTY THAN OCCUPIED ORBITALS.
+
+ EXECUTION OF GAMESS TERMINATED -ABNORMALLY- AT Wed Feb  3 17:07:32 2016
+                580000  WORDS OF DYNAMIC MEMORY USED
+ STEP CPU TIME =     0.02 TOTAL CPU TIME =        0.0 (    0.0 MIN)
+ TOTAL WALL CLOCK TIME=        0.0 SECONDS, CPU UTILIZATION IS 100.00%
+ DDI Process 0: error code 911
+ ddikick.x: application process 0 quit unexpectedly.
+ ddikick.x: Fatal error detected.
+ The error is most likely to be in the application, so check for
+ input errors, disk space, memory needs, application bugs, etc.
+ ddikick.x will now clean up all processes, and exit...
+ ddikick.x: Sending kill signal to DDI processes.
+ ddikick.x: Execution terminated due to error(s).
+-rw------- 1 erb74 dlambrecht  560 Feb  3 17:07 /scratch/3364825.clusman0a.frank.sam.pitt.edu/gamess.F05
+-rw------- 1 erb74 dlambrecht 831K Feb  3 17:07 /scratch/3364825.clusman0a.frank.sam.pitt.edu/gamess.F10
+-rw------- 1 erb74 dlambrecht  560 Feb  3 17:07 /scratch/3364825.clusman0a.frank.sam.pitt.edu/gamess.inp

@@ -1,0 +1,31 @@
+$rem
+ method = hf
+ basis = sto-3g
+ print_general_basis = true
+ ! scf_guess = core
+ xc_grid = 000128000770
+ scf_convergence = 9
+ thresh = 14
+ scf_max_cycles = 1000
+ symmetry = false
+ sym_ignore = true
+ cc_symmetry = false
+ ! moprop_pertnum = 0
+ ! moprop_conv_1st = 8
+ ! moprop_diis = 0
+ ! moprop_maxiter_1st = 1000
+ ! cpscf_activate = 1
+ ! cpscf_activate_internal = 0
+$end
+
+$molecule
+0 1
+C         -4.17279        2.71785       -0.10705
+N         -4.61074        1.36006        0.11435
+O         -3.39764        1.66807       -0.47929
+S         -3.54968        3.49993        1.40731
+H         -4.65853        3.25487       -0.95033
+H         -5.24440        1.07756       -0.66755
+H         -4.78235        3.34711        2.06997
+
+$end

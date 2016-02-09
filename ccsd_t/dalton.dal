@@ -1,0 +1,33 @@
+BASIS
+STO-3G
+---
+---
+Atomtypes=5 Angstrom Charge=0 Nosymmetry
+Charge=6.0 Atoms=1
+C         -4.17279        2.71785       -0.10705
+Charge=7.0 Atoms=1
+N         -4.61074        1.36006        0.11435
+Charge=8.0 Atoms=1
+O         -3.39764        1.66807       -0.47929
+Charge=16.0 Atoms=1
+S         -3.54968        3.49993        1.40731
+Charge=1.0 Atoms=3
+H         -4.65853        3.25487       -0.95033
+H         -5.24440        1.07756       -0.66755
+H         -4.78235        3.34711        2.06997
+
+**DALTON INPUT
+.RUN ALL
+.DIRECT
+**INTEGRALS
+*TWOINT
+.IFTHRS
+20
+**WAVE FUNCTIONS
+.CC
+*SCF IN
+.THRESH
+ 1.0D-09
+*CC INPUT
+.CC(T)
+**END OF DALTON INPUT
