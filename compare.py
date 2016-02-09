@@ -4,7 +4,7 @@ import cclib
 from cclib.parser import ccopen
 
 outputfilenames_scf = (
-    ('CFOUR', 'cfour/cfour.out'),
+    ('CFOUR', 'cfour.out'),
     ('DALTON', 'dalton.out'),
     # ('Gaussian', 'g09.out'),
     ('GAMESS', 'gamess.out'),
@@ -16,7 +16,7 @@ outputfilenames_scf = (
 )
 
 outputfilenames_ccsd_t = (
-    ('CFOUR', 'ccsd_t/cfour/cfour.out'),
+    ('CFOUR', 'ccsd_t/cfour.out'),
     ('DALTON', 'ccsd_t/dalton.out'),
     # ('Gaussian', 'ccsd_t/g09.out'),
     # Some complaint about fewer virtuals than occupieds.
