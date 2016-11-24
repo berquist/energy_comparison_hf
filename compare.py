@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import cclib
-from cclib.parser import ccopen
+from cclib.io import ccopen
 
 outputfilenames_scf = (
     ('CFOUR', 'cfour.out'),
@@ -25,8 +25,7 @@ outputfilenames_ccsd_t = (
     # ('MOLPRO', 'ccsd_t/molpro.out'),
     ('NWChem', 'ccsd_t/nwchem.out'),
     ('ORCA', 'ccsd_t/orca.out'),
-    # Crashes?
-    # ('Psi4', 'ccsd_t/psi4.out'),
+    ('Psi4', 'ccsd_t/psi4.out'),
     ('Q-Chem', 'ccsd_t/qchem.out'),
 )
 
@@ -37,7 +36,7 @@ energies_scf = [
     (cclib.parser.molproparser.Molpro, '!RHF STATE 1.1 Energy', -1),
     (cclib.parser.nwchemparser.NWChem, 'Total SCF energy', -1),
     (cclib.parser.orcaparser.ORCA, 'Total Energy       :', 3),
-    (cclib.parser.psiparser.Psi, 'Final Energy:', 3),
+    (cclib.parser.psiparser.Psi, '@RHF Final Energy:', 3),
     (cclib.parser.qchemparser.QChem, 'Total energy in the final basis set', -1),
 ]
 
@@ -48,7 +47,7 @@ energies_ccsd_t = [
     # (cclib.parser.molproparser.Molpro, '', ),
     (cclib.parser.nwchemparser.NWChem, ' Total CCSD(T) energy:', -1),
     (cclib.parser.orcaparser.ORCA, 'E(CCSD(T))', -1),
-    # (cclib.parser.psiparser.Psi, '', ),
+    (cclib.parser.psiparser.Psi, '* CCSD(T) total energy', -1),
     (cclib.parser.qchemparser.QChem, ' CCSD(T) total energy', -1),
 ]
 

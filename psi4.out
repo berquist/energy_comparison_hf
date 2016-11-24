@@ -1,22 +1,27 @@
     -----------------------------------------------------------------------
-          PSI4: An Open-Source Ab Initio Electronic Structure Package
-                              PSI 4.0.0-beta5 Driver
+          Psi4: An Open-Source Ab Initio Electronic Structure Package
+                              Psi4 1.0.54 Driver
+
+                          Git: Rev {master} 8d4cec3 dirty
 
     J. M. Turney, A. C. Simmonett, R. M. Parrish, E. G. Hohenstein,
     F. A. Evangelista, J. T. Fermann, B. J. Mintz, L. A. Burns, J. J. Wilke,
     M. L. Abrams, N. J. Russ, M. L. Leininger, C. L. Janssen, E. T. Seidl,
     W. D. Allen, H. F. Schaefer, R. A. King, E. F. Valeev, C. D. Sherrill,
-    and T. D. Crawford, WIREs Comput. Mol. Sci., (2011) (doi: 10.1002/wcms.93)
+    and T. D. Crawford, WIREs Comput. Mol. Sci. 2, 556-565 (2012)
+    (doi: 10.1002/wcms.93)
 
                          Additional Contributions by
-    A. E. DePrince, M. Saitow, U. Bozkaya, A. Yu. Sokolov
+    A. E. DePrince, U. Bozkaya, A. Yu. Sokolov, D. G. A. Smith, R. Di Remigio,
+    R. M. Richard, J. F. Gonthier, H. R. McAlexander, M. Saitow, and
+    B. P. Pritchard
     -----------------------------------------------------------------------
 
-    Process ID:  45465
-    PSI4DATADIR: /opt/sam/psi4/4.0b5/share/psi
 
-    Using LocalCommunicator (Number of processes = 1)
+    Psi4 started on: Wed Nov 23 22:57:30 2016
 
+    Process ID:   6581
+    PSI4DATADIR: /home/eric/opt/apps/python/anaconda2/share/psi4
     Memory level set to 256.000 MB
 
   ==> Input File <==
@@ -44,15 +49,15 @@ set {
 energy('scf')
 --------------------------------------------------------------------------
 
-*** tstart() called on n153
-*** at Wed Feb  3 16:19:59 2016
+*** tstart() called on copper
+*** at Wed Nov 23 22:57:34 2016
 
 
          ---------------------------------------------------------
                                    SCF
             by Justin Turney, Rob Parrish, and Andy Simmonett
                               RHF Reference
-                        1 Threads,    256 MiB Core
+                        4 Threads,    256 MiB Core
          ---------------------------------------------------------
 
   ==> Geometry <==
@@ -62,18 +67,20 @@ energy('scf')
 
     Geometry (in Angstrom), charge = 0, multiplicity = 1:
 
-       Center              X                  Y                   Z       
-    ------------   -----------------  -----------------  -----------------
-           C         -0.311767253112     0.146471742334    -0.601905728855
-           N         -0.749717253112    -1.211318257666    -0.380505728855
-           O          0.463382746888    -0.903308257666    -0.974145728855
-           S          0.311342746888     0.928551742334     0.912454271145
-           H         -0.797507253112     0.683491742334    -1.445185728855
-           H         -1.383377253112    -1.493818257666    -1.162405728855
-           H         -0.921327253112     0.775731742334     1.575114271145
+       Center              X                  Y                   Z               Mass       
+    ------------   -----------------  -----------------  -----------------  -----------------
+           C         -0.311767253112     0.146471742334    -0.601905728855    12.000000000000
+           N         -0.749717253112    -1.211318257666    -0.380505728855    14.003074004780
+           O          0.463382746888    -0.903308257666    -0.974145728855    15.994914619560
+           S          0.311342746888     0.928551742334     0.912454271145    31.972070999000
+           H         -0.797507253112     0.683491742334    -1.445185728855     1.007825032070
+           H         -1.383377253112    -1.493818257666    -1.162405728855     1.007825032070
+           H         -0.921327253112     0.775731742334     1.575114271145     1.007825032070
 
   Running in c1 symmetry.
 
+  Rotational constants: A =      0.64435  B =      0.13968  C =      0.13076 [cm^-1]
+  Rotational constants: A =  19317.04781  B =   4187.50838  C =   3920.15875 [MHz]
   Nuclear repulsion =  160.997126381830242
 
   Charge       = 0
@@ -114,23 +121,6 @@ energy('scf')
 
   Starting with a DF guess...
 
- OEINTS: Wrapper to libmints.
-   by Justin Turney
-
-   Calculation information:
-      Number of atoms:                   7
-      Number of AO shells:              17
-      Number of SO shells:              17
-      Number of primitives:             51
-      Number of atomic orbitals:        27
-      Number of basis functions:        27
-
-      Number of irreps:                  1
-      Number of functions per irrep: [  27 ]
-
-      Overlap, kinetic, potential, dipole, and quadrupole integrals
-        stored in file 35.
-
   ==> Integral Setup <==
 
   ==> DFJK: Density-Fitted J/K Matrices <==
@@ -138,8 +128,8 @@ energy('scf')
     J tasked:                  Yes
     K tasked:                  Yes
     wK tasked:                  No
-    OpenMP threads:              1
-    Integrals threads:           1
+    OpenMP threads:              4
+    Integrals threads:           4
     Memory (MB):               183
     Algorithm:                Core
     Integral Cache:           NONE
@@ -148,14 +138,14 @@ energy('scf')
 
    => Auxiliary Basis Set <=
 
-  Basis Set: CC-PVDZ-JKFIT
-    Number of shells: 135
-    Number of basis function: 391
-    Number of Cartesian functions: 448
+  Basis Set: 
+    Number of shells: 96
+    Number of basis function: 286
+    Number of Cartesian functions: 333
     Spherical Harmonics?: true
     Max angular momentum: 3
 
-  Minimum eigenvalue in the overlap matrix is 2.5374510800E-01.
+  Minimum eigenvalue in the overlap matrix is 2.5374510806E-01.
   Using Symmetric Orthogonalization.
   SCF Guess: Superposition of Atomic Densities via on-the-fly atomic UHF.
 
@@ -163,20 +153,21 @@ energy('scf')
 
                            Total Energy        Delta E     RMS |[F,P]|
 
-   @DF-RHF iter   0:  -559.60783833277151   -5.59608e+02   9.92157e-02 
-   @DF-RHF iter   1:  -559.68771243623701   -7.98741e-02   1.32828e-02 
-   @DF-RHF iter   2:  -559.78912369778641   -1.01411e-01   5.09346e-03 DIIS
-   @DF-RHF iter   3:  -559.80285738673911   -1.37337e-02   1.34476e-03 DIIS
-   @DF-RHF iter   4:  -559.80518067118874   -2.32328e-03   3.29348e-04 DIIS
-   @DF-RHF iter   5:  -559.80535693196703   -1.76261e-04   1.04775e-04 DIIS
-   @DF-RHF iter   6:  -559.80537618990024   -1.92579e-05   1.98558e-05 DIIS
-   @DF-RHF iter   7:  -559.80537676962354   -5.79723e-07   4.70624e-06 DIIS
-   @DF-RHF iter   8:  -559.80537680264456   -3.30210e-08   1.39188e-06 DIIS
-   @DF-RHF iter   9:  -559.80537680558018   -2.93562e-09   4.55657e-07 DIIS
-   @DF-RHF iter  10:  -559.80537680582029   -2.40107e-10   8.63877e-08 DIIS
-   @DF-RHF iter  11:  -559.80537680583120   -1.09139e-11   1.90430e-08 DIIS
-   @DF-RHF iter  12:  -559.80537680583120    0.00000e+00   4.48912e-09 DIIS
-   @DF-RHF iter  13:  -559.80537680583143   -2.27374e-13   8.88618e-10 DIIS
+   @DF-RHF iter   0:  -559.59706515366202   -5.59597e+02   9.81460e-02 
+   @DF-RHF iter   1:  -559.73740022870106   -1.40335e-01   1.12286e-02 
+   @DF-RHF iter   2:  -559.81428180234457   -7.68816e-02   3.71093e-03 DIIS
+   @DF-RHF iter   3:  -559.82226522017936   -7.98342e-03   1.17714e-03 DIIS
+   @DF-RHF iter   4:  -559.82373549355043   -1.47027e-03   3.25300e-04 DIIS
+   @DF-RHF iter   5:  -559.82389482362896   -1.59330e-04   9.80680e-05 DIIS
+   @DF-RHF iter   6:  -559.82391030641020   -1.54828e-05   1.94182e-05 DIIS
+   @DF-RHF iter   7:  -559.82391086085840   -5.54448e-07   6.01118e-06 DIIS
+   @DF-RHF iter   8:  -559.82391090928672   -4.84283e-08   1.90102e-06 DIIS
+   @DF-RHF iter   9:  -559.82391091379100   -4.50427e-09   5.22662e-07 DIIS
+   @DF-RHF iter  10:  -559.82391091416935   -3.78350e-10   8.97675e-08 DIIS
+   @DF-RHF iter  11:  -559.82391091417958   -1.02318e-11   2.02435e-08 DIIS
+   @DF-RHF iter  12:  -559.82391091417981   -2.27374e-13   4.58306e-09 DIIS
+   @DF-RHF iter  13:  -559.82391091418003   -2.27374e-13   1.26326e-09 DIIS
+   @DF-RHF iter  14:  -559.82391091417981    2.27374e-13   3.28335e-10 DIIS
 
   DF guess converged.
 
@@ -187,63 +178,77 @@ energy('scf')
     J tasked:                  Yes
     K tasked:                  Yes
     wK tasked:                  No
-    Integrals threads:           1
+    Integrals threads:           4
     Schwarz Cutoff:          1E-12
 
-   @RHF iter  14:  -559.80567180620483   -2.95000e-04   8.20432e-06 DIIS
-   @RHF iter  15:  -559.80567185828841   -5.20836e-08   2.88351e-06 DIIS
-   @RHF iter  16:  -559.80567186514008   -6.85168e-09   1.08319e-06 DIIS
-   @RHF iter  17:  -559.80567186632152   -1.18143e-09   2.51155e-07 DIIS
-   @RHF iter  18:  -559.80567186639973   -7.82165e-11   5.47468e-08 DIIS
-   @RHF iter  19:  -559.80567186640383   -4.09273e-12   9.34012e-09 DIIS
-   @RHF iter  20:  -559.80567186640383    0.00000e+00   2.44580e-09 DIIS
-   @RHF iter  21:  -559.80567186640428   -4.54747e-13   7.98120e-10 DIIS
+   @RHF iter  15:  -559.80567158356962    1.82393e-02   5.25016e-05 DIIS
+   @RHF iter  16:  -559.80567175556212   -1.71992e-07   3.46220e-06 DIIS
+   @RHF iter  17:  -559.80567176400609   -8.44398e-09   1.12661e-06 DIIS
+   @RHF iter  18:  -559.80567176540171   -1.39562e-09   3.18355e-07 DIIS
+   @RHF iter  19:  -559.80567176550130   -9.95897e-11   8.62334e-08 DIIS
+   @RHF iter  20:  -559.80567176550881   -7.50333e-12   2.01654e-08 DIIS
+   @RHF iter  21:  -559.80567176550926   -4.54747e-13   3.77602e-09 DIIS
+   @RHF iter  22:  -559.80567176550926    0.00000e+00   1.18992e-09 DIIS
+   @RHF iter  23:  -559.80567176550881    4.54747e-13   4.61829e-10 DIIS
 
   ==> Post-Iterations <==
 
-	Orbital Energies (a.u.)
-	-----------------------
+    Orbital Energies (a.u.)
+    -----------------------
 
-	Doubly Occupied:                                                      
+    Doubly Occupied:                                                      
 
-	   1A    -90.776263     2A    -20.342746     3A    -15.402478  
-	   4A    -11.142096     5A     -8.674792     6A     -6.306984  
-	   7A     -6.304924     8A     -6.301706     9A     -1.475351  
-	  10A     -0.995038    11A     -0.945021    12A     -0.788244  
-	  13A     -0.684932    14A     -0.558273    15A     -0.532093  
-	  16A     -0.468887    17A     -0.403466    18A     -0.376966  
-	  19A     -0.344904    20A     -0.284825  
+       1A    -90.776263     2A    -20.342746     3A    -15.402478  
+       4A    -11.142096     5A     -8.674792     6A     -6.306984  
+       7A     -6.304924     8A     -6.301706     9A     -1.475351  
+      10A     -0.995038    11A     -0.945021    12A     -0.788244  
+      13A     -0.684932    14A     -0.558273    15A     -0.532093  
+      16A     -0.468887    17A     -0.403466    18A     -0.376966  
+      19A     -0.344904    20A     -0.284825  
 
-	Virtual:                                                              
+    Virtual:                                                              
 
-	  21A      0.383686    22A      0.438491    23A      0.476418  
-	  24A      0.561516    25A      0.591692    26A      0.695731  
-	  27A      0.751214  
+      21A      0.383687    22A      0.438491    23A      0.476418  
+      24A      0.561516    25A      0.591692    26A      0.695731  
+      27A      0.751214  
 
-	Final Occupation by Irrep:
-	          A 
-	DOCC [    20 ]
+    Final Occupation by Irrep:
+              A 
+    DOCC [    20 ]
 
   Energy converged.
 
-  @RHF Final Energy:  -559.80567186640428
+  @RHF Final Energy:  -559.80567176550881
 
    => Energetics <=
 
     Nuclear Repulsion Energy =            160.9971263818302418
-    One-Electron Energy =               -1095.3856219419431000
-    Two-Electron Energy =                 374.5828236937089741
+    One-Electron Energy =               -1095.3856216992492136
+    Two-Electron Energy =                 374.5828235519101099
     DFT Exchange-Correlation Energy =       0.0000000000000000
     Empirical Dispersion Energy =           0.0000000000000000
-    Total Energy =                       -559.8056718664039408
+    PCM Polarization Energy =               0.0000000000000000
+    EFP Energy =                            0.0000000000000000
+    Total Energy =                       -559.8056717655089187
 
+
+  Saving occupied orbitals to File 180.
+
+*** tstop() called on copper at Wed Nov 23 22:57:36 2016
+Module time:
+	user time   =       6.02 seconds =       0.10 minutes
+	system time =       0.14 seconds =       0.00 minutes
+	total time  =          2 seconds =       0.03 minutes
+Total time:
+	user time   =       6.02 seconds =       0.10 minutes
+	system time =       0.14 seconds =       0.00 minutes
+	total time  =          2 seconds =       0.03 minutes
 
 
 Properties will be evaluated at   0.000000,   0.000000,   0.000000 Bohr
-  ==> Properties <==
 
+Properties computed using the SCF density matrix
 
-Properties computed using the SCF density density matrix
   Nuclear Dipole Moment: (a.u.)
      X:    -2.8956      Y:    -0.0088      Z:    -0.9474
 
@@ -257,16 +262,4 @@ Properties computed using the SCF density density matrix
      X:    -1.8699      Y:     1.2566      Z:    -1.0399     Total:     2.4813
 
 
-  Saving occupied orbitals to File 180.
-
-*** tstop() called on n153 at Wed Feb  3 16:20:01 2016
-Module time:
-	user time   =       1.77 seconds =       0.03 minutes
-	system time =       0.00 seconds =       0.00 minutes
-	total time  =          2 seconds =       0.03 minutes
-Total time:
-	user time   =       1.77 seconds =       0.03 minutes
-	system time =       0.00 seconds =       0.00 minutes
-	total time  =          2 seconds =       0.03 minutes
-
-*** PSI4 exiting successfully. Buy a developer a beer!
+*** Psi4 exiting successfully. Buy a developer a beer!

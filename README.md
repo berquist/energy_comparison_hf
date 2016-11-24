@@ -8,7 +8,7 @@
 * MOLPRO 2012.1.23 (compiled)
 * NWChem 6.0 (binary)
 * ORCA 3.0.3 (binary)
-* Psi 4.0.0-beta5 (compiled)
+* Psi4 1.0 (binary)
 * Q-Chem 4.3.2 (compiled)
 
 ## Requirements

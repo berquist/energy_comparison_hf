@@ -1,5 +1,3 @@
-/home/eric/opt/apps/qchem/trunk_gcc_release_r20063_20160119_qints_r729/exe/qcprog.exe .qchem.in.27752.qcin.1 /tmp/qchem/qchem27752/
-
 Process 0 of 1 is on copper - thread support 0
 initial socket setup ...start
 initial socket setup ...done 
@@ -62,12 +60,12 @@ now start server 0 ...
  Parts of Q-Chem use Armadillo 5.200.1 (Boston Tea Smuggler).
  http://arma.sourceforge.net/
 
- Q-Chem begins on Wed Feb  3 15:11:59 2016  
+ Q-Chem begins on Tue Mar 22 08:41:37 2016  
 
 copper
 Host: 0
 
-     Scratch files written to /tmp/qchem/qchem27752//
+     Scratch files written to /tmp/qchem/qchem25982//
  Parallel job on  1  processors
 
 Checking the input file for inconsistencies... 	...done.
@@ -79,7 +77,6 @@ $rem
  method = hf
  basis = sto-3g
  print_general_basis = true
- ! scf_guess = core
  xc_grid = 000128000770
  scf_convergence = 9
  thresh = 14
@@ -87,12 +84,6 @@ $rem
  symmetry = false
  sym_ignore = true
  cc_symmetry = false
- ! moprop_pertnum = 0
- ! moprop_conv_1st = 8
- ! moprop_diis = 0
- ! moprop_maxiter_1st = 1000
- ! cpscf_activate = 1
- ! cpscf_activate_internal = 0
 $end
 
 $molecule
@@ -104,7 +95,6 @@ S         -3.54968        3.49993        1.40731
 H         -4.65853        3.25487       -0.95033
 H         -5.24440        1.07756       -0.66755
 H         -4.78235        3.34711        2.06997
-
 $end
 --------------------------------------------------------------
  ----------------------------------------------------------------
@@ -206,9 +196,9 @@ $end
 
 
  tim1(1): 
-   3.3339999999999967E-003
+   0.0000000000000000     
  tim1(2): 
-   9.9999999999999995E-007
+   0.0000000000000000     
  A cutoff of  1.0D-14 yielded     73 shell pairs
  There are       397 function pairs
 
@@ -332,10 +322,10 @@ $end
       XZZZ     134.7706   YZZZ    -142.3841   ZZZZ    -171.3338
  -----------------------------------------------------------------
 Archival summary:
-1\1\copper\SP\HF\STO-3G\11113\eric\WedFeb315:11:592016WedFeb315:11:592016\0\\#,HF,STO-3G,\\0,1\S\H,1,1.40782\C,1,1.81472,2,92.6001\H,3,1.11151,1,125.096,2,-90.0584,0\O,3,1.357,1,111.479,2,124.662,0\N,5,1.38524,3,63.5267,1,-104.044,0\H,6,1.04532,5,105.688,3,-102.636,0\\HF=-559.805672\\@
+1\1\copper\SP\HF\STO-3G\11113\eric\TueMar2208:41:382016TueMar2208:41:382016\0\\#,HF,STO-3G,\\0,1\S\H,1,1.40782\C,1,1.81472,2,92.6001\H,3,1.11151,1,125.096,2,-90.0584,0\O,3,1.357,1,111.479,2,124.662,0\N,5,1.38524,3,63.5267,1,-104.044,0\H,6,1.04532,5,105.688,3,-102.636,0\\HF=-559.805672\\@
 
- Total job time:  0.31s(wall), 0.33s(cpu) 
- Wed Feb  3 15:11:59 2016
+ Total job time:  0.47s(wall), 0.44s(cpu) 
+ Tue Mar 22 08:41:38 2016
 
         *************************************************************
         *                                                           *

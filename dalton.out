@@ -141,13 +141,13 @@
   Hans Agren,               KTH Stockholm,                Sweden      (SIRIUS module, RESPONS, MC-SCRF solvation model)
  --------------------------------------------------------------------------------
 
-     Date and time (Linux)  : Wed Feb  3 15:11:42 2016
+     Date and time (Linux)  : Mon Mar 21 14:08:32 2016
      Host name              : copper                                  
 
  * Work memory size             :    64000000 =  488.28 megabytes.
 
  * Directories for basis set searches:
-   1) /home/eric/Chemistry/calc.epr/cpscfman_test_jobs/issc/energy_comparison_hf
+   1) /home/eric/development/energy_comparison_hf
    2) /home/eric/opt/apps/dalton/2016.0-g5.3.0-openblas-omp/dalton/basis
 
 
@@ -195,24 +195,8 @@ H         -4.78235        3.34711        2.06997
 **DALTON INPUT                                    
 .RUN ALL                                          
 .DIRECT                                           
-**INTEGRALS                                       
-*TWOINT                                           
-.IFTHRS                                           
-20                                                
-# .ICEDIF                                         
-# 20                                              
 **WAVE FUNCTIONS                                  
 .HF                                               
-# .DFT                                            
-# PBE                                             
-*SCF IN                                           
-.THRESH                                           
- 1.0D-09                                          
-*DFT INPUT                                        
-.ULTRAF                                           
-# **PROPERTIES                                    
-# .SHIELD                                         
-# .SPIN-S                                         
 **END OF DALTON INPUT                             
 
 
@@ -438,11 +422,7 @@ H         -4.78235        3.34711        2.06997
  ***************************************************************************************
 
 
-
-    *************************************************************************
-    ****************** Output from HERMIT input processing ******************
-    *************************************************************************
-
+ - Using defaults, no **INTEGRALS input found
 
  Default print level:        1
 
@@ -456,23 +436,12 @@ H         -4.78235        3.34711        2.06997
  Dipole origin   (bohr):      0.000000000000      0.000000000000      0.000000000000
 
 
-  Set-up from HR2INP:
-  -------------------
-
- Print level in TWOINT:    1
- * Direct calculation of Fock matrices in AO-basis.
- * Screening threshold in direct Fock matrix construction: 1.00D-20
-    ---> WARNING : Screening turned off !
- * Separate density screening of Coulomb integral batches
- * Separate density screening of exchange integral batches
-
-
      ************************************************************************
      ************************** Output from HERINT **************************
      ************************************************************************
 
-  Total CPU  time used in HERMIT:   0.03 seconds
-  Total wall time used in HERMIT:   0.03 seconds
+  Total CPU  time used in HERMIT:   0.07 seconds
+  Total wall time used in HERMIT:   0.13 seconds
 
 
                         .----------------------------------.
@@ -485,14 +454,6 @@ H         -4.78235        3.34711        2.06997
                    | Starting in Wave Function Section (SIRIUS) |
                    `--------------------------------------------'
 
-
-
- Settings for DFT calculation:
- -----------------------------
-
-     Default thresholds:                                       1.00D-09    1.00D-10    2.00D-12
-     Default threshold for number of electrons:                1.00D-03
-     DFT radial quadrature accuracy and ang. expansion order:              2.00D-15  64
 
  *** Output from Huckel module :
 
@@ -520,7 +481,7 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
  **********************************************************************
 
  
-     Date and time (Linux)  : Wed Feb  3 15:11:42 2016
+     Date and time (Linux)  : Mon Mar 21 14:08:32 2016
      Host name              : copper                                  
 
  Title lines from ".mol" input file:
@@ -569,7 +530,7 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
      Maximum number of Fock   iterations      0
      Maximum number of DIIS   iterations     60
      Maximum number of QC-SCF iterations     60
-     Threshold for SCF convergence     1.00D-09
+     Threshold for SCF convergence     1.00D-05
 
 
  ***********************************************
@@ -580,77 +541,59 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
 
  Iter      Total energy        Error norm    Delta(E)  DIIS dim.
  -----------------------------------------------------------------------------
-@  1    -559.470746931        1.88152D+00   -5.59D+02    1
+   1  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)   -6    1    T  1.77D-01  1.75D-01
+@  1    -559.470746462        1.88152D+00   -5.59D+02    1
       Virial theorem: -V/T =      2.010214
 @      MULPOP C       0.92; N      -0.19; O      -0.66; S       0.13; H      -0.16; H       0.06; H      -0.11; 
    1  Level shift: doubly occupied orbital energies shifted by -2.00D-01
  -----------------------------------------------------------------------------
-@  2    -559.785488374        4.40823D-01   -3.15D-01    2
+   2  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)   -6    2    T  1.27D-01  1.22D-01
+@  2    -559.785485163        4.40819D-01   -3.15D-01    2
       Virial theorem: -V/T =      2.011620
 @      MULPOP C      -0.15; N      -0.22; O      -0.09; S       0.24; H       0.11; H       0.15; H      -0.04; 
    2  Level shift: doubly occupied orbital energies shifted by -5.00D-02
  -----------------------------------------------------------------------------
-@  3    -559.803767662        1.12943D-01   -1.83D-02    3
+   3  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)  -10    3    F  1.30D-01  1.22D-01
+@  3    -559.803767797        1.12945D-01   -1.83D-02    3
       Virial theorem: -V/T =      2.011223
 @      MULPOP C       0.03; N      -0.22; O      -0.18; S       0.15; H       0.08; H       0.16; H      -0.02; 
    3  Level shift: doubly occupied orbital energies shifted by -2.50D-02
  -----------------------------------------------------------------------------
-@  4    -559.805571166        2.14282D-02   -1.80D-03    4
+   4  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)  -10    4    T  1.30D-01  1.22D-01
+@  4    -559.805571100        2.14374D-02   -1.80D-03    4
       Virial theorem: -V/T =      2.011156
 @      MULPOP C       0.00; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@  5    -559.805654289        6.35833D-03   -8.31D-05    5
+   5  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)  -10    5    T  1.30D-01  1.21D-01
+@  5    -559.805654286        6.35957D-03   -8.32D-05    5
       Virial theorem: -V/T =      2.011149
 @      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@  6    -559.805663761        1.19794D-03   -9.47D-06    6
+   6  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)  -10    6    T  1.30D-01  1.22D-01
+@  6    -559.805663761        1.19947D-03   -9.47D-06    6
       Virial theorem: -V/T =      2.011152
 @      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@  7    -559.805664104        3.36718D-04   -3.43D-07    7
+   7  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)  -10    7    T  1.27D-01  1.21D-01
+@  7    -559.805664104        3.37361D-04   -3.44D-07    7
       Virial theorem: -V/T =      2.011153
 @      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@  8    -559.805664130        1.04593D-04   -2.62D-08    8
+   8  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)  -10    8    T  1.30D-01  1.22D-01
+@  8    -559.805664130        1.05360D-04   -2.62D-08    8
       Virial theorem: -V/T =      2.011153
 @      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@  9    -559.805664133        4.09632D-05   -2.29D-09    8
+   9  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)  -10    9    T  1.27D-01  1.17D-01
+@  9    -559.805664133        4.12368D-05   -2.53D-09    8
       Virial theorem: -V/T =      2.011153
 @      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@ 10    -559.805664133        8.73720D-06   -3.89D-10    8
-      Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
- -----------------------------------------------------------------------------
-@ 11    -559.805664133        2.04239D-06   -1.84D-11    8
-      Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
- -----------------------------------------------------------------------------
-@ 12    -559.805664133        4.70348D-07   -1.25D-12    8
-      Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
- -----------------------------------------------------------------------------
-@ 13    -559.805664133        1.68001D-07    4.55D-13    8
-      Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
- -----------------------------------------------------------------------------
-@ 14    -559.805664133        3.74370D-08   -3.41D-13    8
-      Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
- -----------------------------------------------------------------------------
-@ 15    -559.805664133        9.30701D-09    4.55D-13    8
-      Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
- -----------------------------------------------------------------------------
-@ 16    -559.805664133        2.02144D-09   -2.27D-13    8
-      Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
- -----------------------------------------------------------------------------
-@ 17    -559.805664133        5.88076D-10   -9.09D-13    8
+  10  Screening settings (-IFTHRS, JTDIIS, DIFDEN, times)  -10   10    T  1.23D-01  1.15D-01
+@ 10    -559.805664133        8.93183D-06   -2.17D-10    8
 
-@ *** DIIS converged in  17 iterations !
-@     Converged SCF energy, gradient:   -559.805664133021    5.88D-10
+@ *** DIIS converged in  10 iterations !
+@     Converged SCF energy, gradient:   -559.805664133182    8.93D-06
     - total time used in SIRFCK :              0.00 seconds
 
 
@@ -661,21 +604,21 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
 
  Sym       Hartree-Fock orbital energies
 
-1 A     -90.77627466   -20.34274568   -15.40247792   -11.14209589    -8.67479526
-         -6.30698561    -6.30492574    -6.30170823    -1.47535112    -0.99503769
-         -0.94502090    -0.78824450    -0.68493245    -0.55827275    -0.53209304
-         -0.46888750    -0.40346641    -0.37696637    -0.34490460    -0.28482528
-          0.38368619     0.43849122     0.47641804     0.56151622     0.59169160
-          0.69573069     0.75121388
+1 A     -90.77627425   -20.34274555   -15.40247877   -11.14209584    -8.67479488
+         -6.30698523    -6.30492536    -6.30170786    -1.47535122    -0.99503791
+         -0.94502077    -0.78824451    -0.68493259    -0.55827277    -0.53209310
+         -0.46888753    -0.40346638    -0.37696626    -0.34490497    -0.28482503
+          0.38368619     0.43849143     0.47641812     0.56151590     0.59169137
+          0.69573055     0.75121381
 
     E(LUMO) :     0.38368619 au (symmetry 1)
-  - E(HOMO) :    -0.28482528 au (symmetry 1)
+  - E(HOMO) :    -0.28482503 au (symmetry 1)
   ------------------------------------------
-    gap     :     0.66851147 au
+    gap     :     0.66851122 au
 
  --- Writing SIRIFC interface file
 
- CPU and wall time for SCF :       2.193       2.084
+ CPU and wall time for SCF :       1.383       1.278
 
 
                        .-----------------------------------.
@@ -687,17 +630,17 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
 @    Spatial symmetry:            1 ( irrep  A   in C1  )
 @    Total charge of molecule:    0
 
-@    Final HF energy:            -559.805664133021                 
+@    Final HF energy:            -559.805664133182                 
 @    Nuclear repulsion:           160.997127054202
-@    Electronic energy:          -720.802791187223
+@    Electronic energy:          -720.802791187383
 
-@    Final gradient norm:           0.000000000588
+@    Final gradient norm:           0.000008931832
 
  
-     Date and time (Linux)  : Wed Feb  3 15:11:45 2016
+     Date and time (Linux)  : Mon Mar 21 14:08:33 2016
      Host name              : copper                                  
 
-File label for MO orbitals:   3Feb16   FOCKDIIS
+File label for MO orbitals:  21Mar16   FOCKDIIS
 
  (Only coefficients >0.0100 are printed.)
 
@@ -714,7 +657,7 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
   16 S   :1s    -0.9942   0.0000  -0.0000  -0.0001   0.3673  -0.0007   0.0067
   17 S   :1s    -0.0171  -0.0000   0.0000   0.0002  -1.0469   0.0020  -0.0195
   18 S   :1s     0.0025   0.0002   0.0001  -0.0040  -0.0534  -0.0009   0.0092
-  19 S   :2px    0.0002  -0.0000   0.0000  -0.0002   0.0135  -0.2777  -0.9012
+  19 S   :2px    0.0002  -0.0000   0.0000  -0.0002   0.0135  -0.2778  -0.9012
   20 S   :2py    0.0001   0.0000  -0.0000  -0.0003   0.0053   0.2382  -0.3499
   21 S   :2pz    0.0001   0.0000  -0.0000  -0.0004   0.0043   0.9131  -0.1828
   22 S   :2px   -0.0003   0.0001  -0.0001   0.0013   0.0071  -0.0168  -0.0536
@@ -730,13 +673,13 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
    5 C   :2pz    0.0014   0.0185   0.0674   0.0921   0.2108   0.2644   0.1923
    6 N   :1s    -0.0000   0.1129  -0.1776   0.0530  -0.0480  -0.0208  -0.0451
    7 N   :1s    -0.0003  -0.3329   0.6532  -0.2063   0.2131   0.0879   0.2065
-   8 N   :2px    0.0002  -0.0870  -0.1173  -0.0155   0.0786   0.2119  -0.1770
+   8 N   :2px    0.0002  -0.0870  -0.1173  -0.0155   0.0786   0.2119  -0.1769
    9 N   :2py   -0.0002  -0.0728   0.0661   0.0776  -0.1748   0.2242  -0.2591
   10 N   :2pz    0.0007   0.0833  -0.0801   0.0881   0.0036   0.2751   0.2079
   11 O   :1s     0.0000   0.1821   0.1496   0.0323  -0.0497   0.0548  -0.0343
   12 O   :1s    -0.0005  -0.6192  -0.6271  -0.1389   0.2343  -0.2666   0.1783
   13 O   :2px    0.0005   0.1424  -0.0968   0.0429   0.0636  -0.0518   0.4452
-  14 O   :2py   -0.0002  -0.0558  -0.0784   0.1198  -0.2368   0.0964  -0.0534
+  14 O   :2py   -0.0002  -0.0558  -0.0784   0.1198  -0.2368   0.0964  -0.0535
   15 O   :2pz    0.0002  -0.0595   0.0270   0.0328   0.0783   0.3955   0.2117
   16 S   :1s     0.0002  -0.0034   0.0072   0.0670   0.0459  -0.0198  -0.0133
   17 S   :1s    -0.0005   0.0120  -0.0248  -0.2292  -0.1550   0.0657   0.0438
@@ -752,13 +695,13 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
   27 H   :1s    -0.0000  -0.0013   0.0214   0.1318   0.1506  -0.0856  -0.2457
 
     Orbital        15       16       17       18       19       20       21
-   1 C   :1s    -0.0087  -0.0024   0.0170  -0.0341   0.0036  -0.0053  -0.0909
+   1 C   :1s    -0.0087  -0.0024   0.0170  -0.0341   0.0036  -0.0053  -0.0910
    2 C   :1s     0.0015  -0.0123  -0.0866   0.1430  -0.0329   0.0142   0.4908
    3 C   :2px   -0.3639   0.1964   0.2305   0.1930  -0.2025   0.0058  -0.2769
-   4 C   :2py    0.2449   0.1421   0.0307   0.1527  -0.0889   0.0249   0.1267
+   4 C   :2py    0.2448   0.1421   0.0307   0.1527  -0.0889   0.0249   0.1267
    5 C   :2pz   -0.0067  -0.0605  -0.3724   0.2231   0.0203  -0.0132   0.4561
    6 N   :1s    -0.0126   0.0123  -0.0345   0.0474   0.0729   0.0116   0.0277
-   7 N   :1s     0.0998  -0.0478   0.1608  -0.2331  -0.3734  -0.0541  -0.1790
+   7 N   :1s     0.0998  -0.0478   0.1609  -0.2331  -0.3733  -0.0541  -0.1790
    8 N   :2px    0.3463   0.3206   0.0916   0.0935  -0.0683   0.0457   0.2070
    9 N   :2py   -0.0206  -0.2135  -0.3545  -0.1276   0.2911  -0.0939  -0.3644
   10 N   :2pz    0.1384  -0.2556   0.1644  -0.3675  -0.4867  -0.0360  -0.0605
@@ -775,17 +718,17 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
   21 S   :2pz   -0.0046   0.0745  -0.0982   0.0753  -0.0339  -0.0908  -0.2092
   22 S   :2px   -0.1391   0.3127  -0.0944  -0.5223   0.1224   0.2719  -0.2644
   23 S   :2py    0.0446   0.0983   0.0801  -0.1872   0.0432  -0.9356   0.1814
-  24 S   :2pz    0.0100  -0.2160   0.2903  -0.2287   0.1031   0.3011   0.7611
+  24 S   :2pz    0.0101  -0.2160   0.2903  -0.2287   0.1031   0.3011   0.7611
   25 H   :1s     0.2942   0.0368   0.2276  -0.1254   0.0745   0.1209  -0.1711
-  26 H   :1s    -0.2596   0.0061   0.0266   0.1727   0.2210   0.0281   0.1116
-  27 H   :1s     0.0821  -0.3515   0.2756   0.2644  -0.0418   0.0041  -0.6047
+  26 H   :1s    -0.2596   0.0061   0.0266   0.1727   0.2210   0.0281   0.1117
+  27 H   :1s     0.0821  -0.3515   0.2755   0.2644  -0.0418   0.0041  -0.6047
 
     Orbital        22       23       24       25       26       27
    1 C   :1s    -0.1060   0.0620  -0.0255  -0.0283  -0.1443   0.1031
    2 C   :1s     0.5672  -0.3479   0.1481   0.2146   0.8788  -0.5760
-   3 C   :2px    0.5536   0.3730   0.1918  -0.4911  -0.2212  -0.3244
+   3 C   :2px    0.5536   0.3730   0.1918  -0.4911  -0.2212  -0.3243
    4 C   :2py    0.5004   0.0033   0.1773   0.2462  -0.2254   0.9825
-   5 C   :2pz    0.1630  -0.2693  -0.3870  -0.1940  -0.7586  -0.2595
+   5 C   :2pz    0.1629  -0.2693  -0.3870  -0.1940  -0.7586  -0.2595
    6 N   :1s    -0.0076  -0.0014  -0.1366  -0.0056   0.0730  -0.0350
    7 N   :1s     0.0666   0.0302   0.8456   0.1019  -0.4976   0.2499
    8 N   :2px   -0.2170  -0.3376   0.2278  -0.7302   0.2132   0.3754
@@ -793,13 +736,13 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
   10 N   :2pz    0.0282   0.1624  -0.6251  -0.1673   0.3882   0.1784
   11 O   :1s     0.0086  -0.0136   0.0687  -0.0659   0.0359  -0.0470
   12 O   :1s    -0.0544   0.0725  -0.4110   0.4148  -0.2414   0.3343
-  13 O   :2px   -0.1439  -0.2081   0.6071  -0.4224   0.1488  -0.1454
+  13 O   :2px   -0.1439  -0.2080   0.6071  -0.4224   0.1488  -0.1454
   14 O   :2py   -0.4099  -0.2944   0.0314   0.0877  -0.3718   0.5168
   15 O   :2pz   -0.0128   0.1346  -0.1804   0.3451   0.0299   0.0960
   16 S   :1s    -0.0281   0.0270   0.0057   0.0028   0.0065   0.0044
   17 S   :1s     0.0830  -0.0787  -0.0163  -0.0082  -0.0174  -0.0125
   18 S   :1s    -0.4580   0.4529   0.1007   0.0464   0.1265   0.0815
-  19 S   :2px   -0.1020   0.1997   0.0484  -0.0138   0.0256  -0.0004
+  19 S   :2px   -0.1021   0.1997   0.0484  -0.0138   0.0256  -0.0004
   20 S   :2py   -0.0748   0.0458   0.0223   0.0279   0.0191   0.0421
   21 S   :2pz   -0.1498  -0.0486  -0.0139   0.0202   0.0278   0.0142
   22 S   :2px    0.3819  -0.7460  -0.1818   0.0510  -0.1015  -0.0011
@@ -809,11 +752,11 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
   26 H   :1s     0.0047  -0.0024  -0.7167  -0.6929   0.4993   0.3978
   27 H   :1s     0.2834  -0.7670  -0.1444   0.0185  -0.0585  -0.0212
 
-  Total CPU  time used in SIRIUS :  48 hours  0 minutes  0 seconds
+  Total CPU  time used in SIRIUS : 480 hours  0 minutes  0 seconds
   Total wall time used in SIRIUS :   0.00 seconds
 
  
-     Date and time (Linux)  : Wed Feb  3 15:11:45 2016
+     Date and time (Linux)  : Mon Mar 21 14:08:33 2016
      Host name              : copper                                  
 
 
@@ -838,8 +781,8 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
 
-   SCF energy         :     -559.805664133020855
- -- inactive part     :     -720.802791187222510
+   SCF energy         :     -559.805664133181835
+ -- inactive part     :     -720.802791187383491
  -- nuclear repulsion :      160.997127054201655
 
 
@@ -849,7 +792,7 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
   Total CPU  time used in RESPONSE:   0.00 seconds
-  Total wall time used in RESPONSE:   0.00 seconds
+  Total wall time used in RESPONSE:   0.03 seconds
 
 
                    .-------------------------------------------.
@@ -868,7 +811,7 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
  
-     Date and time (Linux)  : Wed Feb  3 15:11:45 2016
+     Date and time (Linux)  : Mon Mar 21 14:08:34 2016
      Host name              : copper                                  
 
 
@@ -878,7 +821,7 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
  
-     Date and time (Linux)  : Wed Feb  3 15:11:45 2016
+     Date and time (Linux)  : Mon Mar 21 14:08:34 2016
      Host name              : copper                                  
 
 
@@ -906,7 +849,7 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
      State number       1
      Total charge       0
 
-     Total energy       -559.8056641330 au (Hartrees)
+     Total energy       -559.8056641332 au (Hartrees)
                         -15233.08700964 eV
                           -1469769.5446 kJ/mol
                            -351283.3520 kcal/mol
@@ -915,11 +858,11 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
                    Scalar Breit-Pauli relativistic corrections
                    -------------------------------------------
 
-     Darwin correction:                          2.4934991617 au
+     Darwin correction:                          2.4934991611 au
      Mass-velocity correction:                  -3.3883784940 au
 
-     Total relativistic correction:             -0.8948793323 au (0.1599%)
-     Non-relativistic + relativistic energy:  -560.7005434653 au
+     Total relativistic correction:             -0.8948793329 au (0.1599%)
+     Non-relativistic + relativistic energy:  -560.7005434661 au
 
 
 
@@ -930,7 +873,7 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
                                   -------------
 
                  au               Debye          C m (/(10**-30)
-              0.976225           2.481317           8.276783
+              0.976227           2.481322           8.276799
 
 
                              Dipole moment components
@@ -938,9 +881,9 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
                  au               Debye          C m (/(10**-30)
 
-      x     -0.73569112        -1.86994018        -6.23744903
-      y      0.49436574         1.25655230         4.19140732
-      z     -0.40911737        -1.03987258        -3.46864155
+      x     -0.73569406        -1.86994765        -6.23747396
+      y      0.49436215         1.25654317         4.19137684
+      z     -0.40912078        -1.03988123        -3.46867042
 
 
    Units:   1 a.u. =   2.54175 Debye 
@@ -1015,17 +958,17 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
 
-  Total CPU  time used in ABACUS:   0.01 seconds
-  Total wall time used in ABACUS:   0.01 seconds
+  Total CPU  time used in ABACUS:   0.02 seconds
+  Total wall time used in ABACUS:   0.03 seconds
 
 
                    .-------------------------------------------.
                    | End of Static Property Section (ABACUS) - |
                    `-------------------------------------------'
 
-  Total CPU  time used in DALTON:   2.29 seconds
-  Total wall time used in DALTON:   2.14 seconds
+  Total CPU  time used in DALTON:   1.58 seconds
+  Total wall time used in DALTON:   1.76 seconds
 
  
-     Date and time (Linux)  : Wed Feb  3 15:11:45 2016
+     Date and time (Linux)  : Mon Mar 21 14:08:34 2016
      Host name              : copper                                  
