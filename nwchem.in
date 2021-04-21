@@ -19,4 +19,4 @@ scf
   adapt off
 end
 
-task scf
+task scf energy

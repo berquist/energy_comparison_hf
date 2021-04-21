@@ -4,7 +4,7 @@
      *************** Dalton - An Electronic Structure Program ***************
      ************************************************************************
 
-    This is output from DALTON release Dalton2016.0 (2015)
+    This is output from DALTON release Dalton2021.alpha (2020)
          ( Web site: http://daltonprogram.org )
 
    ----------------------------------------------------------------------------
@@ -27,13 +27,13 @@
      
        K. Aidas, C. Angeli, K. L. Bak, V. Bakken, R. Bast,
        L. Boman, O. Christiansen, R. Cimiraglia, S. Coriani,
-       J. Cukras, P. Dahle, E. K. Dalskov, U. Ekstroem,
+       P. Dahle, E. K. Dalskov, U. Ekstroem,
        T. Enevoldsen, J. J. Eriksen, P. Ettenhuber, B. Fernandez,
        L. Ferrighi, H. Fliegl, L. Frediani, K. Hald, A. Halkier,
        C. Haettig, H. Heiberg, T. Helgaker, A. C. Hennum,
        H. Hettema, E. Hjertenaes, S. Hoest, I.-M. Hoeyvik,
        M. F. Iozzi, B. Jansik, H. J. Aa. Jensen, D. Jonsson,
-       P. Joergensen, M. Kaminski, J. Kauczor, S. Kirpekar,
+       P. Joergensen, J. Kauczor, S. Kirpekar,
        T. Kjaergaard, W. Klopper, S. Knecht, R. Kobayashi, H. Koch,
        J. Kongsted, A. Krapp, K. Kristensen, A. Ligabue,
        O. B. Lutnaes, J. I. Melo, K. V. Mikkelsen, R. H. Myhre,
@@ -52,11 +52,11 @@
      
     and
      
-       Dalton, a Molecular Electronic Structure Program,
-       Release Dalton2016.0 (2015), see http://daltonprogram.org
+       Dalton, a molecular electronic structure program,
+       Release Dalton2021.alpha (2020), see http://daltonprogram.org
    ----------------------------------------------------------------------------
 
-    Authors in alphabetical order (major contribution(s) in parenthesis):
+    Authors in alphabetical order (Major contribution(s) in parenthesis):
 
   Kestutis Aidas,           Vilnius University,           Lithuania   (QM/MM)
   Celestino Angeli,         University of Ferrara,        Italy       (NEVPT2)
@@ -65,60 +65,68 @@
   Radovan Bast,             UiT The Arctic U. of Norway,  Norway      (DALTON installation and execution frameworks)
   Pablo Baudin,             University of Valencia,       Spain       (Cholesky excitation energies)
   Linus Boman,              NTNU,                         Norway      (Cholesky decomposition and subsystems)
+  Bruno N. Cabral Tenorio,  Technical Univ. of Denmark,   Denmark     (Lanczos-based CC methods)
   Ove Christiansen,         Aarhus University,            Denmark     (CC module)
   Renzo Cimiraglia,         University of Ferrara,        Italy       (NEVPT2)
-  Sonia Coriani,            University of Trieste,        Italy       (CC module, MCD in RESPONS)
-  Janusz Cukras,            University of Trieste,        Italy       (MChD in RESPONS)
+  Sonia Coriani,            Technical Univ. of Denmark,   Denmark     (CC and RESPONS modules)
+  Janusz Cukras,            University of Warsaw,         Poland      (MChD in RESPONS)
   Paal Dahle,               University of Oslo,           Norway      (Parallelization)
   Erik K. Dalskov,          UNI-C,                        Denmark     (SOPPA)
   Thomas Enevoldsen,        Univ. of Southern Denmark,    Denmark     (SOPPA)
-  Janus J. Eriksen,         Aarhus University,            Denmark     (Polarizable embedding model, TDA)
-  Rasmus Faber,             University of Copenhagen,     Denmark     (Vib.avg. NMR with SOPPA, parallel AO-SOPPA)
-  Berta Fernandez,          U. of Santiago de Compostela, Spain       (doublet spin, ESR in RESPONS)
+  Janus J. Eriksen,         Aarhus University,            Denmark     (Polarizable embedding, TDA)
+  Rasmus Faber,             Technical Univ. of Denmark,   Denmark     (Vib.avg. NMR w. SOPPA, parallel AO-SOPPA, CVS-CC and EOMCC)
+  Tobias Fahleson,          KTH Stockholm,                Sweden      (Damped cubic response)
+  Berta Fernandez,          U. of Santiago de Compostela, Spain       (Doublet spin, ESR in RESPONS)
   Lara Ferrighi,            Aarhus University,            Denmark     (PCM Cubic response)
   Heike Fliegl,             University of Oslo,           Norway      (CCSD(R12))
   Luca Frediani,            UiT The Arctic U. of Norway,  Norway      (PCM)
+  Emmanuel Fromager,        Univ. Strasbourg,             France      (MC-srDFT)
   Bin Gao,                  UiT The Arctic U. of Norway,  Norway      (Gen1Int library)
+  Andre S. P. Gomes,        CNRS/Universite de Lille,     France      (Frozen density embedding)
   Christof Haettig,         Ruhr-University Bochum,       Germany     (CC module)
   Kasper Hald,              Aarhus University,            Denmark     (CC module)
   Asger Halkier,            Aarhus University,            Denmark     (CC module)
   Frederik Beyer Hansen,    University of Copenhagen,     Denmark     (Parallel AO-SOPPA)
-  Erik D. Hedegaard,        Univ. of Southern Denmark,    Denmark     (Polarizable embedding model, QM/MM)
-  Hanne Heiberg,            University of Oslo,           Norway      (geometry analysis, selected one-electron integrals)
+  Erik D. Hedegaard,        Univ. of Southern Denmark,    Denmark     (Polarizable embedding, QM/MM, and MC-srDFT)
+  Hanne Heiberg,            University of Oslo,           Norway      (Geometry analysis, selected one-electron integrals)
   Trygve Helgaker,          University of Oslo,           Norway      (DALTON; ABACUS, ERI, DFT modules, London, and much more)
   Alf Christian Hennum,     University of Oslo,           Norway      (Parity violation)
-  Hinne Hettema,            University of Auckland,       New Zealand (quadratic response in RESPONS; SIRIUS supersymmetry)
+  Hinne Hettema,            University of Auckland,       New Zealand (Quadratic response in RESPONS; SIRIUS supersymmetry)
   Eirik Hjertenaes,         NTNU,                         Norway      (Cholesky decomposition)
+  Pi A. B. Haase,           University of Copenhagen,     Denmark     (Triplet AO-SOPPA)
   Maria Francesca Iozzi,    University of Oslo,           Norway      (RPA)
+  Christoph Jacob           TU Braunschweig               Germany     (Frozen density embedding)
   Brano Jansik              Technical Univ. of Ostrava    Czech Rep.  (DFT cubic response)
-  Hans Joergen Aa. Jensen,  Univ. of Southern Denmark,    Denmark     (DALTON; SIRIUS, RESPONS, ABACUS modules, London, and much more)
-  Dan Jonsson,              UiT The Arctic U. of Norway,  Norway      (cubic response in RESPONS module)
+  Hans Joergen Aa. Jensen,  Univ. of Southern Denmark,    Denmark     (DALTON; SIRIUS, RESPONS, ABACUS, MC-srDFT, and much more)
+  Dan Jonsson,              UiT The Arctic U. of Norway,  Norway      (Cubic response in RESPONS module)
   Poul Joergensen,          Aarhus University,            Denmark     (RESPONS, ABACUS, and CC modules)
   Maciej Kaminski,          University of Warsaw,         Poland      (CPPh in RESPONS)
   Joanna Kauczor,           Linkoeping University,        Sweden      (Complex polarization propagator (CPP) module)
   Sheela Kirpekar,          Univ. of Southern Denmark,    Denmark     (Mass-velocity & Darwin integrals)
+  Erik Kjellgren,           Univ. of Southern Denmark,    Denmark     (MC-srDFT)
   Wim Klopper,              KIT Karlsruhe,                Germany     (R12 code in CC, SIRIUS, and ABACUS modules)
-  Stefan Knecht,            ETH Zurich,                   Switzerland (Parallel CI and MCSCF)
+  Stefan Knecht,            ETH Zurich,                   Switzerland (Parallel CI and MCSCF, MC-srDFT)
   Rika Kobayashi,           Australian National Univ.,    Australia   (DIIS in CC, London in MCSCF)
   Henrik Koch,              NTNU,                         Norway      (CC module, Cholesky decomposition)
-  Jacob Kongsted,           Univ. of Southern Denmark,    Denmark     (Polarizable embedding model, QM/MM)
+  Jacob Kongsted,           Univ. of Southern Denmark,    Denmark     (Polarizable embedding, polarizable density embedding, QM/MM)
   Andrea Ligabue,           University of Modena,         Italy       (CTOCD, AOSOPPA)
-  Nanna H. List             Univ. of Southern Denmark,    Denmark     (Polarizable embedding model)
+  Nanna H. List             Univ. of Southern Denmark,    Denmark     (Polarizable embedding)
   Ola B. Lutnaes,           University of Oslo,           Norway      (DFT Hessian)
   Juan I. Melo,             University of Buenos Aires,   Argentina   (LRESC, Relativistic Effects on NMR Shieldings)
   Kurt V. Mikkelsen,        University of Copenhagen,     Denmark     (MC-SCRF and QM/MM)
-  Rolf H. Myhre,            NTNU,                         Norway      (Cholesky, subsystems and ECC2)
+  Rolf H. Myhre,            NTNU,                         Norway      (Subsystems and CC3)
   Christian Neiss,          Univ. Erlangen-Nuernberg,     Germany     (CCSD(R12))
   Christian B. Nielsen,     University of Copenhagen,     Denmark     (QM/MM)
-  Patrick Norman,           Linkoeping University,        Sweden      (Cubic response and complex frequency response in RESPONS)
+  Patrick Norman,           KTH Stockholm,                Sweden      (Cubic response and complex frequency response in RESPONS)
   Jeppe Olsen,              Aarhus University,            Denmark     (SIRIUS CI/density modules)
-  Jogvan Magnus H. Olsen,   Univ. of Southern Denmark,    Denmark     (Polarizable embedding model, QM/MM)
+  Jogvan Magnus H. Olsen,   Aarhus University,            Denmark     (Polarizable embedding and polarizable density embedding)
   Anders Osted,             Copenhagen University,        Denmark     (QM/MM)
   Martin J. Packer,         University of Sheffield,      UK          (SOPPA)
   Filip Pawlowski,          Kazimierz Wielki University,  Poland      (CC3)
-  Morten N. Pedersen,       Univ. of Southern Denmark,    Denmark     (Polarizable embedding model)
+  Morten N. Pedersen,       Univ. of Southern Denmark,    Denmark     (Polarizable embedding)
   Thomas B. Pedersen,       University of Oslo,           Norway      (Cholesky decomposition)
   Patricio F. Provasi,      University of Northeastern,   Argentina   (Analysis of coupling constants in localized orbitals)
+  Peter Reinholdt,          Univ. of Southern Denmark,    Denmark     (Polarizable embedding and polarizable density embedding)
   Zilvinas Rinkevicius,     KTH Stockholm,                Sweden      (open-shell DFT, ESR)
   Elias Rudberg,            KTH Stockholm,                Sweden      (DFT grid and basis info)
   Torgeir A. Ruden,         University of Oslo,           Norway      (Numerical derivatives in ABACUS)
@@ -129,86 +137,102 @@
   Trond Saue,               Paul Sabatier University,     France      (direct Fock matrix construction)
   Stephan P. A. Sauer,      University of Copenhagen,     Denmark     (SOPPA(CCSD), SOPPA prop., AOSOPPA, vibrational g-factors)
   Bernd Schimmelpfennig,    Forschungszentrum Karlsruhe,  Germany     (AMFI module)
-  Kristian Sneskov,         Aarhus University,            Denmark     (Polarizable embedding model, QM/MM)
-  Arnfinn H. Steindal,      UiT The Arctic U. of Norway,  Norway      (parallel QM/MM, Polarizable embedding model)
-  Casper Steinmann,         Univ. of Southern Denmark,    Denmark     (QFIT, Polarizable embedding model)
+  Anna K. Schnack-Petersen, University of Copenhagen,     Denmark     (RPA(D) and HRPA(D) properties in AOSOPPA)
+  Kristian Sneskov,         Aarhus University,            Denmark     (Polarizable embedding, QM/MM)
+  Arnfinn H. Steindal,      UiT The Arctic U. of Norway,  Norway      (parallel QM/MM, polarizable embedding)
+  Casper Steinmann,         Aalborg University,           Denmark     (QFIT, polarizable embedding)
   K. O. Sylvester-Hvid,     University of Copenhagen,     Denmark     (MC-SCRF)
   Peter R. Taylor,          VLSCI/Univ. of Melbourne,     Australia   (Symmetry handling ABACUS, integral transformation)
   Andrew M. Teale,          University of Nottingham,     England     (DFT-AC, DFT-D)
   David P. Tew,             University of Bristol,        England     (CCSD(R12))
-  Olav Vahtras,             KTH Stockholm,                Sweden      (triplet response, spin-orbit, ESR, TDDFT, open-shell DFT)
+  Julien Toulouse,          Sorbonne Univ.,               France      (MC-srDFT)
+  Olav Vahtras,             KTH Stockholm,                Sweden      (Triplet response, spin-orbit, ESR, TDDFT, open-shell DFT)
+  Lucas Visscher,           Vrije Universiteit Amsterdam, Netherlands (Frozen density embedding)
   David J. Wilson,          La Trobe University,          Australia   (DFT Hessian and DFT magnetizabilities)
-  Hans Agren,               KTH Stockholm,                Sweden      (SIRIUS module, RESPONS, MC-SCRF solvation model)
+  Hans Agren,               KTH Stockholm,                Sweden      (SIRIUS module, RESPONS, MC-SCRF solvation)
  --------------------------------------------------------------------------------
 
-     Date and time (Linux)  : Wed Feb  3 16:54:13 2016
-     Host name              : copper                                  
+     Date and time (Linux)  : Wed Apr 21 09:13:14 2021
+     Host name              : osmium                                  
 
  * Work memory size             :    64000000 =  488.28 megabytes.
 
  * Directories for basis set searches:
-   1) /home/eric/Chemistry/calc.epr/cpscfman_test_jobs/issc/energy_comparison_hf/ccsd_t
-   2) /home/eric/opt/apps/dalton/2016.0-g5.3.0-openblas-omp/dalton/basis
+   1) /home/eric/development/energy_comparison_hf/ccsd_t
+   2) /home/eric/data/opt/apps/dalton/2020.0-g10.2.0-openblas-omp/dalton/basis
 
 
 Compilation information
 -----------------------
 
  Who compiled             | eric
- Host                     | copper
- System                   | Linux-4.3.3-2-ARCH
+ Host                     | osmium
+ System                   | Linux-5.8.14-arch1-1
  CMake generator          | Unix Makefiles
  Processor                | x86_64
  64-bit integers          | OFF
  MPI                      | OFF
- Fortran compiler         | /usr/bin/gfortran
- C compiler               | /usr/bin/gcc
- C++ compiler             | /usr/bin/g++
- BLAS                     | /lib64/libopenblas.so
- LAPACK                   | /lib64/liblapack.so
+ Fortran compiler         | /usr/bin/f95
+ Fortran compiler version | GNU Fortran (GCC) 10.2.0
+ Fortran flags            |  -fopenmp -ffloat-store -fcray-pointer -std=legacy
+                          |  -fallow-invalid-boz -fallow-argument-mismatch -m6
+                          | 4 -O3 -ffast-math -funroll-loops -ftree-vectorize 
+                          | -w
+ C compiler               | /usr/bin/cc
+ C compiler version       | cc (GCC) 10.2.0
+ C flags                  |  -fopenmp -std=c99 -DRESTRICT=restrict -DFUNDERSCO
+                          | RE=1 -DHAVE_NO_LSEEK64 -ffloat-store -Wall -m64 -O
+                          | 3 -ffast-math -funroll-loops -ftree-vectorize -Wno
+                          | -unused
+ C++ compiler             | /usr/bin/c++
+ C++ compiler version     | c++ (GCC) 10.2.0
+ C++ flags                |  -fopenmp -g -Wall -fno-rtti -fno-exceptions -m64 
+                          | -march=native -O3 -ffast-math -funroll-loops -ftre
+                          | e-vectorize -Wno-unused
+ BLAS                     | /usr/lib/libopenblas.so
+ LAPACK                   | /usr/lib/liblapack.so
  Static linking           | OFF
- Last Git revision        | 693735158eee69ff73df6846b9911e94803b8d7a
- Configuration time       | 2016-01-15 11:36:35.128575
-
- * OpenMP run using 2 threads.
+ Last Git revision        | 7afe6b478b03e7b824521c7f25b3ae968b64a077
+ Git branch               | master
+ Configuration time       | 2021-01-16 18:20:38.368863
 
 
    Content of the .dal input file
  ----------------------------------
 
-BASIS                                             
-STO-3G                                            
----                                               
----                                               
-Atomtypes=5 Angstrom Charge=0 Nosymmetry          
-Charge=6.0 Atoms=1                                
-C         -4.17279        2.71785       -0.10705  
-Charge=7.0 Atoms=1                                
-N         -4.61074        1.36006        0.11435  
-Charge=8.0 Atoms=1                                
-O         -3.39764        1.66807       -0.47929  
-Charge=16.0 Atoms=1                               
-S         -3.54968        3.49993        1.40731  
-Charge=1.0 Atoms=3                                
-H         -4.65853        3.25487       -0.95033  
-H         -5.24440        1.07756       -0.66755  
-H         -4.78235        3.34711        2.06997  
-                                                  
-**DALTON INPUT                                    
-.RUN ALL                                          
-.DIRECT                                           
-**INTEGRALS                                       
-*TWOINT                                           
-.IFTHRS                                           
-20                                                
-**WAVE FUNCTIONS                                  
-.CC                                               
-*SCF IN                                           
-.THRESH                                           
- 1.0D-09                                          
-*CC INPUT                                         
-.CC(T)                                            
-**END OF DALTON INPUT                             
+BASIS
+STO-3G
+---
+---
+Atomtypes=5 Angstrom Charge=0 Nosymmetry
+Charge=6.0 Atoms=1
+C         -4.17279        2.71785       -0.10705
+Charge=7.0 Atoms=1
+N         -4.61074        1.36006        0.11435
+Charge=8.0 Atoms=1
+O         -3.39764        1.66807       -0.47929
+Charge=16.0 Atoms=1
+S         -3.54968        3.49993        1.40731
+Charge=1.0 Atoms=3
+H         -4.65853        3.25487       -0.95033
+H         -5.24440        1.07756       -0.66755
+H         -4.78235        3.34711        2.06997
+
+**DALTON INPUT
+.RUN ALL
+.DIRECT
+**INTEGRALS
+*TWOINT
+.IFTHRS
+20
+**WAVE FUNCTIONS
+.CC
+*SCF IN
+.THRESH
+ 1.0D-09
+*CC INPUT
+.CC(T)
+**END OF DALTON INPUT
 
 
        *******************************************************************
@@ -248,7 +272,7 @@ H         -4.78235        3.34711        2.06997
   Number of symmetry independent centers:    1
   Number of basis sets to read;    2
   Basis set file used for this atomic type with Z =   6 :
-     "/home/eric/opt/apps/dalton/2016.0-g5.3.0-openblas-omp/dalton/basis/STO-3G"
+     "/home/eric/data/opt/apps/dalton/2020.0-g10.2.0-openblas-omp/dalton/basis/STO-3G"
 
   Atomic type no.    2
   --------------------
@@ -256,7 +280,7 @@ H         -4.78235        3.34711        2.06997
   Number of symmetry independent centers:    1
   Number of basis sets to read;    2
   Basis set file used for this atomic type with Z =   7 :
-     "/home/eric/opt/apps/dalton/2016.0-g5.3.0-openblas-omp/dalton/basis/STO-3G"
+     "/home/eric/data/opt/apps/dalton/2020.0-g10.2.0-openblas-omp/dalton/basis/STO-3G"
 
   Atomic type no.    3
   --------------------
@@ -264,7 +288,7 @@ H         -4.78235        3.34711        2.06997
   Number of symmetry independent centers:    1
   Number of basis sets to read;    2
   Basis set file used for this atomic type with Z =   8 :
-     "/home/eric/opt/apps/dalton/2016.0-g5.3.0-openblas-omp/dalton/basis/STO-3G"
+     "/home/eric/data/opt/apps/dalton/2020.0-g10.2.0-openblas-omp/dalton/basis/STO-3G"
 
   Atomic type no.    4
   --------------------
@@ -272,7 +296,7 @@ H         -4.78235        3.34711        2.06997
   Number of symmetry independent centers:    1
   Number of basis sets to read;    2
   Basis set file used for this atomic type with Z =  16 :
-     "/home/eric/opt/apps/dalton/2016.0-g5.3.0-openblas-omp/dalton/basis/STO-3G"
+     "/home/eric/data/opt/apps/dalton/2020.0-g10.2.0-openblas-omp/dalton/basis/STO-3G"
 
   Atomic type no.    5
   --------------------
@@ -280,7 +304,7 @@ H         -4.78235        3.34711        2.06997
   Number of symmetry independent centers:    3
   Number of basis sets to read;    2
   Basis set file used for this atomic type with Z =   1 :
-     "/home/eric/opt/apps/dalton/2016.0-g5.3.0-openblas-omp/dalton/basis/STO-3G"
+     "/home/eric/data/opt/apps/dalton/2020.0-g10.2.0-openblas-omp/dalton/basis/STO-3G"
 
 
                          SYMGRP: Point group information
@@ -304,6 +328,7 @@ H         -4.78235        3.34711        2.06997
                        Natural abundance:  93.360 %
 
  Center-of-mass coordinates (a.u.):   -7.296276    4.859201    0.935142
+ Center-of-mass coordinates (Angs):   -3.861023    2.571378    0.494856
 
 
   Atoms and basis sets
@@ -441,8 +466,6 @@ H         -4.78235        3.34711        2.06997
 
  Default print level:        1
 
- * Nuclear model: Point charge
-
  Calculation of one-electron Hamiltonian integrals.
 
  Center of mass  (bohr):     -7.296275539483      4.859200685300      0.935141813099
@@ -456,7 +479,7 @@ H         -4.78235        3.34711        2.06997
 
  Print level in TWOINT:    1
  * Direct calculation of Fock matrices in AO-basis.
- * Screening threshold in direct Fock matrix construction: 1.00D-20
+ * Screening threshold in direct Fock matrix construction:  1.00D-20
     ---> WARNING : Screening turned off !
  * Separate density screening of Coulomb integral batches
  * Separate density screening of exchange integral batches
@@ -466,8 +489,20 @@ H         -4.78235        3.34711        2.06997
      ************************** Output from HERINT **************************
      ************************************************************************
 
-  Total CPU  time used in HERMIT:   0.03 seconds
-  Total wall time used in HERMIT:   0.03 seconds
+
+
+                      Nuclear contribution to dipole moments
+                      --------------------------------------
+
+                 au               Debye          C m (/(10**-30)
+
+      x   -294.74663084      -749.17116064     -2498.96600349
+      y    194.35927682       494.01197422      1647.84657199
+      z     36.45825936        92.66764612       309.10599532
+
+
+  Total CPU  time used in HERMIT:   0.05 seconds
+  Total wall time used in HERMIT:   0.08 seconds
 
 
                         .----------------------------------.
@@ -507,8 +542,8 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
  **********************************************************************
 
  
-     Date and time (Linux)  : Wed Feb  3 16:54:13 2016
-     Host name              : copper                                  
+     Date and time (Linux)  : Wed Apr 21 09:13:15 2021
+     Host name              : osmium                                  
 
  Title lines from ".mol" input file:
      ---                                                                     
@@ -530,7 +565,7 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
      Wave function specification
      ============================
 
-     For the specification of the Coupled Cluster: see later.
+     For the specification of the Coupled Cluster: see below.
 
 @    Wave function type        --- CC ---
 @    Number of closed shell electrons          40
@@ -583,72 +618,72 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
  -----------------------------------------------------------------------------
 @  1    -559.470746931        1.88152D+00   -5.59D+02    1
       Virial theorem: -V/T =      2.010214
-@      MULPOP C       0.92; N      -0.19; O      -0.66; S       0.13; H      -0.16; H       0.06; H      -0.11; 
+@    MULPOP   C       0.92; N      -0.19; O      -0.66; S       0.13; H      -0.16; H       0.06; H      -0.11; 
    1  Level shift: doubly occupied orbital energies shifted by -2.00D-01
  -----------------------------------------------------------------------------
 @  2    -559.785488374        4.40823D-01   -3.15D-01    2
       Virial theorem: -V/T =      2.011620
-@      MULPOP C      -0.15; N      -0.22; O      -0.09; S       0.24; H       0.11; H       0.15; H      -0.04; 
+@    MULPOP   C      -0.15; N      -0.22; O      -0.09; S       0.24; H       0.11; H       0.15; H      -0.04; 
    2  Level shift: doubly occupied orbital energies shifted by -5.00D-02
  -----------------------------------------------------------------------------
 @  3    -559.803767662        1.12943D-01   -1.83D-02    3
       Virial theorem: -V/T =      2.011223
-@      MULPOP C       0.03; N      -0.22; O      -0.18; S       0.15; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.03; N      -0.22; O      -0.18; S       0.15; H       0.08; H       0.16; H      -0.02; 
    3  Level shift: doubly occupied orbital energies shifted by -2.50D-02
  -----------------------------------------------------------------------------
 @  4    -559.805571166        2.14282D-02   -1.80D-03    4
       Virial theorem: -V/T =      2.011156
-@      MULPOP C       0.00; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.00; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
 @  5    -559.805654289        6.35833D-03   -8.31D-05    5
       Virial theorem: -V/T =      2.011149
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
 @  6    -559.805663761        1.19794D-03   -9.47D-06    6
       Virial theorem: -V/T =      2.011152
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
 @  7    -559.805664104        3.36718D-04   -3.43D-07    7
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
 @  8    -559.805664130        1.04593D-04   -2.62D-08    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
 @  9    -559.805664133        4.09632D-05   -2.29D-09    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
 @ 10    -559.805664133        8.73720D-06   -3.89D-10    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@ 11    -559.805664133        2.04239D-06   -1.84D-11    8
+@ 11    -559.805664133        2.04239D-06   -1.82D-11    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@ 12    -559.805664133        4.70348D-07   -1.25D-12    8
+@ 12    -559.805664133        4.70348D-07   -1.36D-12    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
 @ 13    -559.805664133        1.68001D-07    4.55D-13    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@ 14    -559.805664133        3.74370D-08   -3.41D-13    8
+@ 14    -559.805664133        3.74369D-08    2.27D-13    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@ 15    -559.805664133        9.30701D-09    4.55D-13    8
+@ 15    -559.805664133        9.30700D-09   -1.14D-13    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@ 16    -559.805664133        2.02144D-09   -2.27D-13    8
+@ 16    -559.805664133        2.02143D-09   -6.82D-13    8
       Virial theorem: -V/T =      2.011153
-@      MULPOP C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
+@    MULPOP   C       0.01; N      -0.22; O      -0.17; S       0.16; H       0.08; H       0.16; H      -0.02; 
  -----------------------------------------------------------------------------
-@ 17    -559.805664133        5.88076D-10   -9.09D-13    8
+@ 17    -559.805664133        5.88078D-10    0.00D+00    8
 
 @ *** DIIS converged in  17 iterations !
 @     Converged SCF energy, gradient:   -559.805664133021    5.88D-10
@@ -657,8 +692,8 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
 
  *** SCF orbital energy analysis ***
 
- Number of electrons :   40
- Orbital occupations :   20
+ Number of electrons        :   40
+ Closed shell orbitals      :   20
 
  Sym       Hartree-Fock orbital energies
 
@@ -676,7 +711,151 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
 
  --- Writing SIRIFC interface file
 
- CPU and wall time for SCF :       2.097       2.068
+--------------------------------------------------------------------------------
+
+
+     .---------------------------------------------------------------.
+     | HF-SCF KT IPs [a.u. & eV], pole strengths, and Dyson orbitals |
+     `---------------------------------------------------------------'
+
+     HF-SCF KT symmetry 1 ( A  ) in point group C1  -- 20 principal poles
+
+   ============  ============  ============  ============  ============
+      90.776275     20.342746     15.402478     11.142096      8.674795
+    2470.148087    553.554269    419.122744    303.191852    236.053187
+   ------------  ------------  ------------  ------------  ------------
+       1.000000      1.000000      1.000000      1.000000      1.000000
+   ============  ============  ============  ============  ============
+       1.000000      0.000000     -0.000000      0.000000      0.000000
+       0.000000     -1.000000     -0.000000     -0.000000      0.000000
+      -0.000000      0.000000     -1.000000      0.000000      0.000000
+      -0.000000     -0.000000      0.000000      1.000000      0.000000
+       0.000000     -0.000000     -0.000000      0.000000     -1.000000
+       0.000000     -0.000000     -0.000000      0.000000      0.000000
+       0.000000      0.000000     -0.000000     -0.000000      0.000000
+      -0.000000     -0.000000     -0.000000      0.000000      0.000000
+       0.000000     -0.000000      0.000000      0.000000     -0.000000
+      -0.000000      0.000000     -0.000000     -0.000000      0.000000
+      -0.000000     -0.000000      0.000000      0.000000      0.000000
+       0.000000     -0.000000     -0.000000      0.000000      0.000000
+      -0.000000     -0.000000     -0.000000     -0.000000      0.000000
+       0.000000     -0.000000     -0.000000      0.000000      0.000000
+       0.000000      0.000000     -0.000000     -0.000000      0.000000
+       0.000000      0.000000     -0.000000      0.000000     -0.000000
+      -0.000000     -0.000000     -0.000000     -0.000000      0.000000
+      -0.000000      0.000000     -0.000000     -0.000000      0.000000
+      -0.000000     -0.000000      0.000000     -0.000000      0.000000
+      -0.000000     -0.000000     -0.000000     -0.000000     -0.000000
+   ============  ============  ============  ============  ============
+  
+
+   ============  ============  ============  ============  ============
+       6.306986      6.304926      6.301708      1.475351      0.995038
+     171.621809    171.565757    171.478204     40.146346     27.076353
+   ------------  ------------  ------------  ------------  ------------
+       1.000000      1.000000      1.000000      1.000000      1.000000
+   ============  ============  ============  ============  ============
+       0.000000     -0.000000     -0.000000     -0.000000      0.000000
+       0.000000      0.000000      0.000000     -0.000000      0.000000
+       0.000000     -0.000000      0.000000      0.000000     -0.000000
+       0.000000      0.000000      0.000000     -0.000000      0.000000
+      -0.000000      0.000000     -0.000000     -0.000000      0.000000
+      -1.000000     -0.000000     -0.000000      0.000000     -0.000000
+      -0.000000      1.000000     -0.000000     -0.000000     -0.000000
+       0.000000     -0.000000     -1.000000      0.000000      0.000000
+       0.000000      0.000000      0.000000      1.000000     -0.000000
+      -0.000000      0.000000      0.000000      0.000000      1.000000
+       0.000000     -0.000000     -0.000000      0.000000      0.000000
+       0.000000      0.000000      0.000000     -0.000000     -0.000000
+      -0.000000     -0.000000      0.000000      0.000000      0.000000
+      -0.000000      0.000000     -0.000000      0.000000     -0.000000
+       0.000000     -0.000000     -0.000000      0.000000      0.000000
+      -0.000000      0.000000     -0.000000      0.000000      0.000000
+       0.000000     -0.000000      0.000000     -0.000000     -0.000000
+       0.000000      0.000000     -0.000000     -0.000000      0.000000
+      -0.000000      0.000000      0.000000     -0.000000      0.000000
+      -0.000000     -0.000000      0.000000     -0.000000      0.000000
+   ============  ============  ============  ============  ============
+  
+
+   ============  ============  ============  ============  ============
+       0.945021      0.788244      0.684932      0.558273      0.532093
+      25.715327     21.449224     18.637960     15.191374     14.478988
+   ------------  ------------  ------------  ------------  ------------
+       1.000000      1.000000      1.000000      1.000000      1.000000
+   ============  ============  ============  ============  ============
+       0.000000      0.000000      0.000000     -0.000000     -0.000000
+      -0.000000      0.000000     -0.000000     -0.000000      0.000000
+       0.000000      0.000000     -0.000000     -0.000000     -0.000000
+      -0.000000      0.000000      0.000000     -0.000000      0.000000
+       0.000000     -0.000000      0.000000      0.000000      0.000000
+       0.000000     -0.000000     -0.000000     -0.000000      0.000000
+       0.000000      0.000000      0.000000     -0.000000      0.000000
+      -0.000000     -0.000000      0.000000     -0.000000     -0.000000
+      -0.000000     -0.000000     -0.000000     -0.000000     -0.000000
+      -0.000000     -0.000000     -0.000000      0.000000     -0.000000
+       1.000000     -0.000000     -0.000000     -0.000000      0.000000
+      -0.000000     -1.000000     -0.000000     -0.000000     -0.000000
+       0.000000     -0.000000      1.000000     -0.000000      0.000000
+       0.000000     -0.000000      0.000000      1.000000     -0.000000
+      -0.000000     -0.000000     -0.000000      0.000000      1.000000
+      -0.000000      0.000000      0.000000     -0.000000      0.000000
+       0.000000      0.000000      0.000000      0.000000     -0.000000
+       0.000000     -0.000000      0.000000     -0.000000     -0.000000
+      -0.000000     -0.000000      0.000000      0.000000      0.000000
+       0.000000      0.000000     -0.000000      0.000000      0.000000
+   ============  ============  ============  ============  ============
+  
+
+   ============  ============  ============  ============  ============
+       0.468888      0.403466      0.376966      0.344905      0.284825
+      12.759078     10.978879     10.257777      9.385332      7.750490
+   ------------  ------------  ------------  ------------  ------------
+       1.000000      1.000000      1.000000      1.000000      1.000000
+   ============  ============  ============  ============  ============
+       0.000000      0.000000      0.000000     -0.000000     -0.000000
+      -0.000000     -0.000000      0.000000      0.000000      0.000000
+       0.000000     -0.000000     -0.000000     -0.000000      0.000000
+       0.000000      0.000000      0.000000     -0.000000     -0.000000
+       0.000000      0.000000      0.000000     -0.000000      0.000000
+       0.000000      0.000000      0.000000      0.000000      0.000000
+       0.000000      0.000000     -0.000000      0.000000     -0.000000
+       0.000000      0.000000     -0.000000     -0.000000     -0.000000
+       0.000000      0.000000      0.000000     -0.000000     -0.000000
+       0.000000      0.000000     -0.000000      0.000000      0.000000
+      -0.000000     -0.000000     -0.000000     -0.000000      0.000000
+      -0.000000      0.000000     -0.000000      0.000000     -0.000000
+       0.000000     -0.000000     -0.000000      0.000000     -0.000000
+      -0.000000     -0.000000      0.000000      0.000000      0.000000
+       0.000000      0.000000      0.000000      0.000000      0.000000
+      -1.000000     -0.000000     -0.000000     -0.000000      0.000000
+      -0.000000      1.000000     -0.000000      0.000000     -0.000000
+      -0.000000      0.000000      1.000000     -0.000000      0.000000
+       0.000000      0.000000     -0.000000     -1.000000     -0.000000
+      -0.000000     -0.000000      0.000000      0.000000     -1.000000
+   ============  ============  ============  ============  ============
+  
+
+@ Summary of HF-SCF KT ionization potentials [eV] and pole strengths:
+
+@ Symmetry 1 (A  ) :  2470.148     553.554     419.123     303.192     236.053
+@                      171.622     171.566     171.478      40.146      27.076
+
+@                       25.715      21.449      18.638      15.191      14.479
+
+@                       12.759      10.979      10.258       9.385       7.750
+@ Pole strengths   :     1.000       1.000       1.000       1.000       1.000
+@                        1.000       1.000       1.000       1.000       1.000
+
+@                        1.000       1.000       1.000       1.000       1.000
+
+@                        1.000       1.000       1.000       1.000       1.000
+
+  === End of HF-SCF KT output ===
+--------------------------------------------------------------------------------
+
+
+ CPU and wall time for SCF :       1.941       1.330
 
 
                        .-----------------------------------.
@@ -690,17 +869,17 @@ HUCDRV: reduced number of huckel orbitals in sym 1 from 32 to 27
 
 @    Final HF energy:            -559.805664133021                 
 @    Nuclear repulsion:           160.997127054202
-@    Electronic energy:          -720.802791187223
+@    Electronic energy:          -720.802791187222
 
 @    Final gradient norm:           0.000000000588
 
  
-     Date and time (Linux)  : Wed Feb  3 16:54:15 2016
-     Host name              : copper                                  
+     Date and time (Linux)  : Wed Apr 21 09:13:16 2021
+     Host name              : osmium                                  
 
-File label for MO orbitals:   3Feb16   FOCKDIIS
+File label for MO orbitals:  21Apr21   FOCKDIIS
 
- (Only coefficients >0.0100 are printed.)
+ (Only coefficients > 0.0100 are printed.)
 
  Molecular orbitals for symmetry species 1  (A  )
  ------------------------------------------------
@@ -810,12 +989,12 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
   26 H   :1s     0.0047  -0.0024  -0.7167  -0.6929   0.4993   0.3978
   27 H   :1s     0.2834  -0.7670  -0.1444   0.0185  -0.0585  -0.0212
 
-  Total CPU  time used in SIRIUS :  48 hours  0 minutes  0 seconds
-  Total wall time used in SIRIUS :   0.00 seconds
+  Total CPU  time used in SIRIUS :   2.09 seconds
+  Total wall time used in SIRIUS :   1.39 seconds
 
  
-     Date and time (Linux)  : Wed Feb  3 16:54:15 2016
-     Host name              : copper                                  
+     Date and time (Linux)  : Wed Apr 21 09:13:16 2021
+     Host name              : osmium                                  
 
 
                      .---------------------------------------.
@@ -865,17 +1044,17 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
           Number of t2 amplitudes                 :      9870
           Total number of amplitudes in ccsd      :     10010
 
- Iter.  1: Coupled cluster MP2   energy :    -559.9788008902477259
- Iter.  1: Coupled cluster CCSD  energy :    -560.0099564832657961
- Iter.  2: Coupled cluster CCSD  energy :    -560.0243447545527715
- Iter.  3: Coupled cluster CCSD  energy :    -560.0256963326390860
- Iter.  4: Coupled cluster CCSD  energy :    -560.0259562477962163
- Iter.  5: Coupled cluster CCSD  energy :    -560.0259308284015560
- Iter.  6: Coupled cluster CCSD  energy :    -560.0259285610009101
- Iter.  7: Coupled cluster CCSD  energy :    -560.0259258370730322
- Iter.  8: Coupled cluster CCSD  energy :    -560.0259261363016776
- Iter.  9: Coupled cluster CCSD  energy :    -560.0259261475725907
- Iter. 10: Coupled cluster CCSD  energy :    -560.0259261561632229
+ Iter.  1: Coupled cluster MP2   energy :    -559.9788008902473848
+ Iter.  1: Coupled cluster CCSD  energy :    -560.0099564832654551
+ Iter.  2: Coupled cluster CCSD  energy :    -560.0243447545524305
+ Iter.  3: Coupled cluster CCSD  energy :    -560.0256963326387449
+ Iter.  4: Coupled cluster CCSD  energy :    -560.0259562477958752
+ Iter.  5: Coupled cluster CCSD  energy :    -560.0259308284012150
+ Iter.  6: Coupled cluster CCSD  energy :    -560.0259285610005691
+ Iter.  7: Coupled cluster CCSD  energy :    -560.0259258370726911
+ Iter.  8: Coupled cluster CCSD  energy :    -560.0259261363011092
+ Iter.  9: Coupled cluster CCSD  energy :    -560.0259261475722496
+ Iter. 10: Coupled cluster CCSD  energy :    -560.0259261561628819
 
  CCSD  energy converged to within   0.10D-07 is         -560.025926156163
  Final 2-norm of the CC vector function:  8.61781611D-06
@@ -943,11 +1122,11 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
  *******************************************************************************
 
 
- CPU and wall time for CC :      10.393       9.699
+ CPU and wall time for CC :      18.545       6.288
 
  
-     Date and time (Linux)  : Wed Feb  3 16:54:24 2016
-     Host name              : copper                                  
+     Date and time (Linux)  : Wed Apr 21 09:13:22 2021
+     Host name              : osmium                                  
 
 
                       .-------------------------------------.
@@ -961,9 +1140,9 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
                  `------------------------------------------------'
 
 
- ------------------------------------------------------------------------------
-  RESPONSE  -  an MCSCF, MC-srDFT, DFT, and SOPPA response property program
- ------------------------------------------------------------------------------
+ ----------------------------------------------------------------------------------------
+  RESPONSE  -  an MCSCF, MC-srDFT, DFT, SOPPA and SOPPA-srDFT response property program
+ ----------------------------------------------------------------------------------------
 
 
  -------- OUTPUT FROM RESPONSE INPUT PROCESSING --------
@@ -971,8 +1150,8 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
 
-   SCF energy         :     -559.805664133020855
- -- inactive part     :     -720.802791187222510
+   SCF energy         :     -559.805664133020514
+ -- inactive part     :     -720.802791187222169
  -- nuclear repulsion :      160.997127054201655
 
 
@@ -982,7 +1161,7 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
   Total CPU  time used in RESPONSE:   0.00 seconds
-  Total wall time used in RESPONSE:   0.00 seconds
+  Total wall time used in RESPONSE:   0.04 seconds
 
 
                    .-------------------------------------------.
@@ -1001,8 +1180,8 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
  
-     Date and time (Linux)  : Wed Feb  3 16:54:24 2016
-     Host name              : copper                                  
+     Date and time (Linux)  : Wed Apr 21 09:13:22 2021
+     Host name              : osmium                                  
 
 
    ***************************************************************************
@@ -1011,8 +1190,8 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
 
 
  
-     Date and time (Linux)  : Wed Feb  3 16:54:24 2016
-     Host name              : copper                                  
+     Date and time (Linux)  : Wed Apr 21 09:13:22 2021
+     Host name              : osmium                                  
 
 
                              Molecular geometry (au)
@@ -1051,7 +1230,7 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
      Darwin correction:                          2.4934991617 au
      Mass-velocity correction:                  -3.3883784940 au
 
-     Total relativistic correction:             -0.8948793323 au (0.1599%)
+     Total relativistic correction:             -0.8948793323 au ( 0.1599%)
      Non-relativistic + relativistic energy:  -560.7005434653 au
 
 
@@ -1140,25 +1319,17 @@ File label for MO orbitals:   3Feb16   FOCKDIIS
   bond angle:     C          S          H             92.600
 
 
-
-
- CPU time statistics for ABACUS
- ------------------------------
-
-
-
-
   Total CPU  time used in ABACUS:   0.01 seconds
-  Total wall time used in ABACUS:   0.01 seconds
+  Total wall time used in ABACUS:   0.02 seconds
 
 
                    .-------------------------------------------.
                    | End of Static Property Section (ABACUS) - |
                    `-------------------------------------------'
 
-  Total CPU  time used in DALTON:  12.57 seconds
-  Total wall time used in DALTON:  11.85 seconds
+  Total CPU  time used in DALTON:  20.71 seconds
+  Total wall time used in DALTON:   7.95 seconds
 
  
-     Date and time (Linux)  : Wed Feb  3 16:54:24 2016
-     Host name              : copper                                  
+     Date and time (Linux)  : Wed Apr 21 09:13:22 2021
+     Host name              : osmium                                  

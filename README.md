@@ -1,15 +1,17 @@
 # energy_comparison_hf
 
+How close can we get programs to agree on the Hartree-Fock energy? What about the CCSD(T) energy?
+
 ## Versions
 
 * CFOUR 2.00beta (binary)
-* DALTON 2016.0 (compiled)
+* DALTON 2020.0 (compiled)
 * GAMESS 2014-05-1 (compiled)
-* MOLPRO 2012.1.23 (compiled)
-* NWChem 6.0 (binary)
-* ORCA 3.0.3 (binary)
-* Psi4 1.0 (binary)
-* Q-Chem 4.3.2 (compiled)
+* Molpro 2012.1.23 (compiled)
+* NWChem 6.8 (binary)
+* ORCA 4.2.1 (binary)
+* Psi4 1.3.2 (binary)
+* Q-Chem 5.3.2 (compiled)
 
 ## Requirements
 
@@ -19,11 +21,15 @@ To run the various packages,
 
 ``` bash
 xcfour > cfour.out # rename cfour.in to ZMAT and place the GENBAS file in the same directory
-dalton dalton.dal
+dalton -noarch -nobackup dalton.dal
 rungms gamess.inp
 molpro
-nwchem
+nwchem nwchem.in > nwchem.out
 orca orca.in > orca.out
-psi4
+psi4 psi4.in
 qchem qchem.in qchem.out
 ```
+
+## TODO
+
+- CCSD(T) for Molpro and GAMESS
