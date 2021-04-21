@@ -36,7 +36,7 @@ energies_scf = [
     (cclib.parser.molproparser.Molpro, '!RHF STATE 1.1 Energy', -1),
     (cclib.parser.nwchemparser.NWChem, 'Total SCF energy', -1),
     (cclib.parser.orcaparser.ORCA, 'Total Energy       :', 3),
-    (cclib.parser.psiparser.Psi, '@RHF Final Energy:', 3),
+    (cclib.parser.psi4parser.Psi4, '@RHF Final Energy:', 3),
     (cclib.parser.qchemparser.QChem, 'Total energy in the final basis set', -1),
 ]
 
@@ -47,7 +47,7 @@ energies_ccsd_t = [
     # (cclib.parser.molproparser.Molpro, '', ),
     (cclib.parser.nwchemparser.NWChem, ' Total CCSD(T) energy:', -1),
     (cclib.parser.orcaparser.ORCA, 'E(CCSD(T))', -1),
-    (cclib.parser.psiparser.Psi, '* CCSD(T) total energy', -1),
+    (cclib.parser.psi4parser.Psi4, '* CCSD(T) total energy', -1),
     (cclib.parser.qchemparser.QChem, ' CCSD(T) total energy', -1),
 ]
 
@@ -75,7 +75,8 @@ def get_energy(outputfilename, energy_type_str='scf'):
     for (jobtype, string_to_search, fieldnum) in energies:
         if isinstance(job, jobtype):
             with open(outputfilename) as fh:
-                energy = search_file(fh, string_to_search, fieldnum).replace('D', 'E')
+                energy = search_file(fh, string_to_search, fieldnum)
+                energy = energy.replace('D', 'E')
             return float(energy)
 
 
